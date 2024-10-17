@@ -135,7 +135,9 @@ h6,
 }
 
 .service-item {
-    height: 320px;
+    height: fit-content;
+    min-width: 360px;
+    margin: 20px;
     background: var(--light);
     transition: .5s;
 }
