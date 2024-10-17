@@ -127,3 +127,47 @@
     
 })(jQuery);
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+function showContent(serviceId, boxId) {
+    // Hide all content sections
+    var contents = document.querySelectorAll('.service-content');
+    contents.forEach(function(content) {
+      content.style.display = 'none';
+    });
+  
+    // Remove 'active' class from all boxes
+    var boxes = document.querySelectorAll('.service-box');
+    boxes.forEach(function(box) {
+      box.classList.remove('active');
+    });
+  
+    // Show the clicked content
+    var activeContent = document.getElementById(serviceId);
+    activeContent.style.display = 'block';
+  
+    // Add 'active' class to the clicked box
+    var activeBox = document.getElementById(boxId);
+    activeBox.classList.add('active');
+  }
+  
+  // Show logistics content by default
+  window.onload = function() {
+    showContent('logistics', 'box-logistics');
+  };
+  

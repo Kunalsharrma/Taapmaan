@@ -313,3 +313,59 @@ h6,
     background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url(../img/bg-banner.jpg);
     background-attachment: fixed;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .services {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+    background-color: #f4f4f4;
+  }
+  
+  .service-box {
+    padding: 20px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    width: 30%;
+    text-align: center;
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .service-box:hover {
+    background-color: #0056b3;
+  }
+  
+  .service-box.active {
+    background-color: #0056b3;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .service-content {
+    padding: 40px;
+    width: 100%;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+  }
+  
+  .service-content h2 {
+    margin-top: 0;
+  }
+  
