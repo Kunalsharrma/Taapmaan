@@ -341,7 +341,7 @@ body {
   
   .service-box {
     padding: 20px;
-    background-color: #007bff;
+    /* background-color: #007bff; */
     color: white;
     cursor: pointer;
     width: 30%;
@@ -350,11 +350,11 @@ body {
   }
   
   .service-box:hover {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
   }
   
   .service-box.active {
-    background-color: #0056b3;
+    /* background-color: #0056b3; */
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   }
   
