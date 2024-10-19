@@ -6,6 +6,32 @@
     --dark: #1C1E32;
 }
 
+
+
+
+
+
+
+
+.form-overlay {
+    /* background-color: rgba(255, 255, 255, 0.9); */
+    /* border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
+}
+
+button {
+    background-color: #f57c00; /* Custom button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+button:hover {
+    background-color: #f57c00cc; /* Darker on hover */
+}
+
+
 .text-primaryorange{
     color: var(--primary);
 }
@@ -15,8 +41,6 @@
 }
 
 .bg-lightorange{
-    /* background-color: #fad390; */
-    /* background-color: var(--secondary); */
     background-color: #fce9cb;
 }
 
@@ -26,6 +50,10 @@
 
 .bg-secondaryblue{
     background-color: var(--secondary);
+}
+
+.text-secondaryblue{
+    color: var(--secondary);
 }
 
 .btn-primaryorange{
@@ -339,7 +367,7 @@ h6,
 }
 
 .bg-banner {
-    background: linear-gradient(#5eb4f1c1, #5eb4f1c3), url(../img/bg-banner.jpg);
+    background: linear-gradient(#5eb4f1df, #5eb4f1de), url(../img/bg-banner.jpg);
     background-attachment: fixed;
 }
 
