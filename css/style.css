@@ -1,9 +1,36 @@
 /********** Template CSS **********/
 :root {
-    --primary: #F77D0A;
-    --secondary: #2B2E4A;
+    --primary: #fe6406;
+    --secondary: #5eb4f1;
     --light: #F4F5F8;
     --dark: #1C1E32;
+}
+
+.text-primaryorange{
+    color: var(--primary);
+}
+
+.bg-greyishblue{
+    background-color: #d1e9ef;
+}
+
+.bg-lightorange{
+    /* background-color: #fad390; */
+    /* background-color: var(--secondary); */
+    background-color: #fce9cb;
+}
+
+.bg-primaryorange{
+    background-color: var(--primary);
+}
+
+.bg-secondaryblue{
+    background-color: var(--secondary);
+}
+
+.btn-primaryorange{
+    background-color: var(--primary);
+    color: white;
 }
 
 h1,
@@ -81,7 +108,7 @@ h6,
     font-weight: 500;
     letter-spacing: 1px;
     text-transform: uppercase;
-    color: var(--light);
+    color:#000000;
     outline: none;
 }
 
@@ -312,7 +339,7 @@ h6,
 }
 
 .bg-banner {
-    background: linear-gradient(rgba(28, 30, 50, .9), rgba(28, 30, 50, .9)), url(../img/bg-banner.jpg);
+    background: linear-gradient(#5eb4f1c1, #5eb4f1c3), url(../img/bg-banner.jpg);
     background-attachment: fixed;
 }
 
