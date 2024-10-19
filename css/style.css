@@ -193,7 +193,7 @@ h6,
     height: fit-content;
     min-width: 360px;
     margin: 20px;
-    background: var(--light);
+    /* background: var(--light); */
     transition: .5s;
 }
 
@@ -418,7 +418,7 @@ body {
   .service-content {
     padding: 40px;
     width: 100%;
-    background-color: #f8f9fa;
+    /* background-color: #f8f9fa; */
     border-top: 1px solid #ddd;
   }
   
