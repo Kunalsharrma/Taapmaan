@@ -433,5 +433,6 @@ body {
     background-color: var(--secondary);
 }
 .vehicle-box{
-    width: fit-content;
+    width: 180px;
+    height: 180px;
 }
