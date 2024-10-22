@@ -187,46 +187,44 @@ function showContent(serviceId, boxId) {
   }
 
   // Function to add a new drop location input
-  function addLocation(button) {
-    const inputField = button.previousElementSibling;  // Get the input field
-    if (inputField.value.trim() === "") {
-      return;  // Do nothing if the current input is empty
-    }
+//   function addLocation(button) {
+//     const inputField = button.previousElementSibling; 
+//     if (inputField.value.trim() === "") {
+//       return;  
+//     }
 
-    const droplocationsContainer = document.getElementById('droplocationsContainer');
+//     const droplocationsContainer = document.getElementById('droplocationsContainer');
 
-    const locationWrapper = document.createElement('div');
-    locationWrapper.classList.add('location-wrapper', 'location-field');
+//     const locationWrapper = document.createElement('div');
+//     locationWrapper.classList.add('location-wrapper', 'location-field');
 
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.class = 'form-control p-4';
-    input.name = 'dropLocation[]';
-    input.placeholder = 'Enter drop location';
-    input.required = true;
-    input.oninput = function () {
-      checkInput(input);
-    };
+//     const input = document.createElement('input');
+//     input.type = 'text';
+//     input.class = 'form-control p-4';
+//     input.name = 'dropLocation[]';
+//     input.placeholder = 'Enter drop location';
+//     input.required = true;
+//     input.oninput = function () {
+//       checkInput(input);
+//     };
 
-    // Add "+" button to add another location
-    const addBtn = document.createElement('span');
-    addBtn.classList.add('add-btn', 'disabled');  // Initially disabled
-    addBtn.textContent = '+';
-    addBtn.onclick = function() {
-      addLocation(addBtn);
-    };
+//     const addBtn = document.createElement('span');
+//     addBtn.classList.add('add-btn', 'disabled', 'p-2', 'bg-greyishblue', 'rounded-circle');
+//     addBtn.textContent = '+';
+//     addBtn.onclick = function() {
+//       addLocation(addBtn);
+//     };
 
-    // Add "-" button to remove this location
-    const removeBtn = document.createElement('span');
-    removeBtn.classList.add('remove-btn');
-    removeBtn.textContent = '-';
-    removeBtn.onclick = function() {
-      locationWrapper.remove();
-    };
+//     const removeBtn = document.createElement('span');
+//     removeBtn.classList.add('remove-btn');
+//     removeBtn.textContent = '-';
+//     removeBtn.onclick = function() {
+//       locationWrapper.remove();
+//     };
 
-    locationWrapper.appendChild(input);
-    locationWrapper.appendChild(addBtn);
-    locationWrapper.appendChild(removeBtn);
+//     locationWrapper.appendChild(input);
+//     locationWrapper.appendChild(addBtn);
+//     locationWrapper.appendChild(removeBtn);
 
-    droplocationsContainer.appendChild(locationWrapper);
-  }
+//     droplocationsContainer.appendChild(locationWrapper);
+//   }
