@@ -426,3 +426,12 @@ body {
     margin-top: 0;
   }
   
+
+
+
+  .vehicle-box.selected {
+    background-color: var(--secondary);
+}
+.vehicle-box{
+    width: fit-content;
+}

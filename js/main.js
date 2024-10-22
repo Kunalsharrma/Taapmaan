@@ -228,3 +228,20 @@ function showContent(serviceId, boxId) {
 
 //     droplocationsContainer.appendChild(locationWrapper);
 //   }
+
+
+const vehicleBoxes = document.querySelectorAll('.vehicle-box');
+
+    vehicleBoxes.forEach(box => {
+        box.addEventListener('click', function() {
+            // Remove 'selected' class from all boxes
+            vehicleBoxes.forEach(box => box.classList.remove('selected'));
+            
+            // Add 'selected' class to the clicked box
+            this.classList.add('selected');
+            
+            // You can also use the data-value attribute if needed
+            const selectedValue = this.getAttribute('data-value');
+            console.log('Selected vehicle value:', selectedValue);
+        });
+    });
