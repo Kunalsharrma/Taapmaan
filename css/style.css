@@ -426,10 +426,7 @@ body {
     margin-top: 0;
   }
   
-
-
-
-  .vehicle-box.selected, .vehicle-box:hover {
+.vehicle-box.selected, .vehicle-box:hover {
     background-color: var(--secondary);
 }
 .vehicle-box{
