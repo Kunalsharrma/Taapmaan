@@ -429,7 +429,7 @@ body {
 
 
 
-  .vehicle-box.selected {
+  .vehicle-box.selected, .vehicle-box:hover {
     background-color: var(--secondary);
 }
 .vehicle-box{
