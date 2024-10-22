@@ -171,3 +171,62 @@ function showContent(serviceId, boxId) {
     showContent('logistics', 'box-logistics');
   };
   
+
+
+
+
+  function checkInput(inputElement) {
+    const addButton = inputElement.nextElementSibling;  // Find the "+" button next to the input
+    if (inputElement.value.trim() === "") {
+      addButton.classList.add('disabled');
+      addButton.style.pointerEvents = "none";  // Disable click
+    } else {
+      addButton.classList.remove('disabled');
+      addButton.style.pointerEvents = "auto";  // Enable click
+    }
+  }
+
+  // Function to add a new drop location input
+  function addLocation(button) {
+    const inputField = button.previousElementSibling;  // Get the input field
+    if (inputField.value.trim() === "") {
+      return;  // Do nothing if the current input is empty
+    }
+
+    const droplocationsContainer = document.getElementById('droplocationsContainer');
+
+    const locationWrapper = document.createElement('div');
+    locationWrapper.classList.add('location-wrapper', 'location-field');
+
+    const input = document.createElement('input');
+    input.type = 'text';
+    input.class = 'form-control p-4';
+    input.name = 'dropLocation[]';
+    input.placeholder = 'Enter drop location';
+    input.required = true;
+    input.oninput = function () {
+      checkInput(input);
+    };
+
+    // Add "+" button to add another location
+    const addBtn = document.createElement('span');
+    addBtn.classList.add('add-btn', 'disabled');  // Initially disabled
+    addBtn.textContent = '+';
+    addBtn.onclick = function() {
+      addLocation(addBtn);
+    };
+
+    // Add "-" button to remove this location
+    const removeBtn = document.createElement('span');
+    removeBtn.classList.add('remove-btn');
+    removeBtn.textContent = '-';
+    removeBtn.onclick = function() {
+      locationWrapper.remove();
+    };
+
+    locationWrapper.appendChild(input);
+    locationWrapper.appendChild(addBtn);
+    locationWrapper.appendChild(removeBtn);
+
+    droplocationsContainer.appendChild(locationWrapper);
+  }
