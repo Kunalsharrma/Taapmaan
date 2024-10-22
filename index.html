@@ -105,10 +105,10 @@
         <div class="container-fluid p-0 position-relative" style="margin-bottom: 90px">
             <!-- Form Overlay -->
             <div class="form-overlay position-absolute d-flex justify-content-start m-5 align-items-center" style="top: 150px; left: 100px; z-index: 10">
-                <form class="bg-white p-4 rounded p-5" style="opacity: 0.9; max-width: 600px">
+                <form class="bg-white p-4 rounded p-5" style="opacity: 0.9; max-width: 800px">
                     <h2 class="mb-md-4 text-secondaryblue">Rent the Perfect Vehicle for Every Job!</h2>
                     <div class="row mx-n2">
-                        <div class="col-xl-4 col-lg-4 col-md-6 px-2">
+                        <div class="col-xl-6 col-lg-4 col-md-6 px-2">
                             <select class="custom-select px-4 mb-3" style="height: 50px">
                                 <option selected>Pickup Location</option>
                                 <option value="1">Location 1</option>
@@ -116,16 +116,13 @@
                                 <option value="3">Location 3</option>
                             </select>
                         </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 px-2">
+                        <div class="col-xl-6 col-lg-4 col-md-6 px-2">
                             <div id="droplocationsContainer">
                                 <div class="location-wrapper d-flex justify-content-center location-field">
                                   <input type="text" class="form-control p-4" name="dropLocation[]" placeholder="Enter drop location" required oninput="checkInput(this)">
                                   <!-- <span class="add-btn p-2 bg-greyishblue rounded-circle disabled m-3" onclick="addLocation(this)">+</span> -->
                                 </div>
                               </div>
-                        </div>
-                        <div class="col-xl-4 col-lg-4 col-md-6 px-2">
-                            <input type="text" class="form-control p-4" placeholder="Weight">
                         </div>
                         <div class="col-xl-6 col-lg-4 col-md-6 px-2">
                             <div class="date mb-3" id="date" data-target-input="nearest">
@@ -143,6 +140,28 @@
                                 <div class="vehicle-box border p-3 m-3" data-value="2">Car 2</div>
                                 <div class="vehicle-box border p-3 m-3" data-value="3">Car 3</div>
                             </div>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-6 px-2">
+                            <select class="custom-select px-4 mb-3" style="height: 50px">
+                                <option selected>Quantity of product</option>
+                                <option value="1">Less than 2Kg</option>
+                                <option value="2">2-10kg</option>
+                                <option value="3">10-50kg</option>
+                                <option value="3">More than 50kg</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-6 col-lg-4 col-md-6 px-2">
+                            <select class="custom-select px-4 mb-3" style="height: 50px">
+                                <option selected>Type of product</option>
+                                <option value="1">Frozen Food</option>
+                                <option value="2">Dairy</option>
+                                <option value="3">Raw Meat</option>
+                                <option value="3">Pharma</option>
+                                <option value="3">Fruits & veggies</option>
+                                <option value="3">Ice Cream</option>
+                                <option value="3">Frozen Peas</option>
+                                <option value="3">Others</option>
+                            </select>
                         </div>
                         <div class="col-xl-6 col-lg-4 col-md-6 px-2">
                             <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Search</button>
