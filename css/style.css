@@ -429,9 +429,10 @@ body {
 
 
 
-  .vehicle-box.selected {
+  .vehicle-box.selected, .vehicle-box:hover {
     background-color: var(--secondary);
 }
 .vehicle-box{
-    width: fit-content;
+    width: 180px;
+    height: 180px;
 }
