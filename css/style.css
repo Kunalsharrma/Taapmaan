@@ -1,6 +1,6 @@
 /********** Template CSS **********/
 :root {
-    --primary: #fe6406;
+    --primary: #ff6106;
     --secondary: #5eb4f1;
     --light: #F4F5F8;
     --dark: #1C1E32;
@@ -11,7 +11,9 @@
 
 
 
-
+.banner_text{
+    margin-top: 120px;
+}
 
 .form-overlay {
     /* background-color: rgba(255, 255, 255, 0.9); */
@@ -427,9 +429,10 @@ body {
   }
   
 .vehicle-box.selected, .vehicle-box:hover {
-    background-color: var(--secondary);
+    background-color: #ddeff9;
 }
 .vehicle-box{
     width: 180px;
     height: 180px;
+    cursor: pointer;
 }
