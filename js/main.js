@@ -175,16 +175,16 @@ function showContent(serviceId, boxId) {
 
 
 
-  function checkInput(inputElement) {
-    const addButton = inputElement.nextElementSibling;  // Find the "+" button next to the input
-    if (inputElement.value.trim() === "") {
-      addButton.classList.add('disabled');
-      addButton.style.pointerEvents = "none";  // Disable click
-    } else {
-      addButton.classList.remove('disabled');
-      addButton.style.pointerEvents = "auto";  // Enable click
-    }
-  }
+//   function checkInput(inputElement) {
+//     const addButton = inputElement.nextElementSibling;  // Find the "+" button next to the input
+//     if (inputElement.value.trim() === "") {
+//       addButton.classList.add('disabled');
+//       addButton.style.pointerEvents = "none";  // Disable click
+//     } else {
+//       addButton.classList.remove('disabled');
+//       addButton.style.pointerEvents = "auto";  // Enable click
+//     }
+//   }
 
   // Function to add a new drop location input
 //   function addLocation(button) {
@@ -230,18 +230,18 @@ function showContent(serviceId, boxId) {
 //   }
 
 
-const vehicleBoxes = document.querySelectorAll('.vehicle-box');
+// const vehicleBoxes = document.querySelectorAll('.vehicle-box');
 
-    vehicleBoxes.forEach(box => {
-        box.addEventListener('click', function() {
-            // Remove 'selected' class from all boxes
-            vehicleBoxes.forEach(box => box.classList.remove('selected'));
+//     vehicleBoxes.forEach(box => {
+//         box.addEventListener('click', function() {
+//             // Remove 'selected' class from all boxes
+//             vehicleBoxes.forEach(box => box.classList.remove('selected'));
             
-            // Add 'selected' class to the clicked box
-            this.classList.add('selected');
+//             // Add 'selected' class to the clicked box
+//             this.classList.add('selected');
             
-            // You can also use the data-value attribute if needed
-            const selectedValue = this.getAttribute('data-value');
-            console.log('Selected vehicle value:', selectedValue);
-        });
-    });
+//             // You can also use the data-value attribute if needed
+//             const selectedValue = this.getAttribute('data-value');
+//             console.log('Selected vehicle value:', selectedValue);
+//         });
+//     });
