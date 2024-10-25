@@ -15,14 +15,8 @@
     margin-top: 120px;
 }
 
-.form-overlay {
-    /* background-color: rgba(255, 255, 255, 0.9); */
-    /* border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); */
-}
-
 button {
-    background-color: #f57c00; /* Custom button color */
+    background-color: #f57c00;
     color: white;
     border: none;
     border-radius: 5px;
@@ -30,7 +24,7 @@ button {
 }
 
 button:hover {
-    background-color: #f57c00cc; /* Darker on hover */
+    background-color: #f57c00cc;
 }
 
 
@@ -193,15 +187,16 @@ h6,
 
 .service-item {
     height: fit-content;
-    min-width: 360px;
-    margin: 20px;
-    /* background: var(--light); */
+    min-width: 200px;
+    border-bottom: 5px solid white;
     transition: .5s;
 }
 
 .service-item:hover,
 .service-item.active {
-    background: var(--secondary);
+    /* border-bottom: var(--secondary); */
+    border-bottom: 5px solid var(--secondary);
+    
 }
 
 .service-item h1,
@@ -211,12 +206,12 @@ h6,
 
 .service-item:hover h1,
 .service-item.active h1 {
-    color: var(--dark) !important;
+    /* color: var(--dark) !important; */
 }
 
 .service-item:hover h4,
 .service-item.active h4 {
-    color: var(--light);
+    /* color: var(--light); */
 }
 
 .rent-item {
@@ -400,7 +395,6 @@ body {
   
   .service-box {
     padding: 20px;
-    /* background-color: #007bff; */
     color: white;
     cursor: pointer;
     width: 30%;
@@ -408,19 +402,9 @@ body {
     transition: background-color 0.3s, box-shadow 0.3s;
   }
   
-  .service-box:hover {
-    /* background-color: #0056b3; */
-  }
-  
-  .service-box.active {
-    /* background-color: #0056b3; */
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-  }
-  
   .service-content {
-    padding: 40px;
+    padding: 20px;
     width: 100%;
-    /* background-color: #f8f9fa; */
     border-top: 1px solid #ddd;
   }
   
@@ -432,7 +416,7 @@ body {
     background-color: #ddeff9;
 }
 .vehicle-box{
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 120px;
     cursor: pointer;
 }
