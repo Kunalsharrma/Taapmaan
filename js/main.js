@@ -245,3 +245,7 @@ function showContent(serviceId, boxId) {
 //             console.log('Selected vehicle value:', selectedValue);
 //         });
 //     });
+
+
+
+

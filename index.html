@@ -144,24 +144,19 @@
                     </div>
                     <div class="container">
                         <div class="service-content" id="logistics">
-                            <form class="bg-white rounded" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/formResponse" target="hidden_iframe3" method="post" style="max-width: 80vw">
+                            <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
                                 <div class="row mx-n2">
                                     <div class="col-xl-4 col-lg-4 col-md-6 px-2 my-2">
-                                        <input id="pickup-location" name="entry.664915427" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
+                                        <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 px-2 my-2">
-                                        <input id="drop-location" name="entry.1609326332" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                                        <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-md-6 px-2 my-2">
                                         <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input type="text" name="entry.1532828991" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-3 col-lg-4 col-md-6 px-2 my-2">
-                                    <div class="time mb-3" id="time" data-target-input="nearest">
-                                        <input type="text" name="entry.1155826791" class="form-control p-4" placeholder="Pickup Time" data-target="#time" data-toggle="" />
-                                    </div>
-                                </div> -->
                                     <div class="col-xl-12 col-lg-4 col-md-6 px-2">
                                         <div class="vehicle-selection d-flex align-items-center justify-content-center">
                                             <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-3 m-3" data-value="Frozen">
@@ -179,32 +174,11 @@
                                                 <p class="text-dark mb-0">Dry</p>
                                                 <p class="text-dark mt-0">-14°c to -25°c</p>
                                             </div>
-                                            <input type="hidden" id="selected-vehicle" name="entry.1640733562" value="" />
-                                            <!-- https://docs.google.com/forms/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/viewform?usp=pp_url&entry.664915427=fbd&entry.1609326332=delhio&entry.1532828991=dsfghjk&entry.1155826791=wqsdfg&entry.1640733562=frozen&entry.541085222=fvef&entry.863500876=rfklfwk -->
+                                            <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                    <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-                                        <option selected>Quantity of product</option>
-                                        <option value="Less than 2Kg">Less than 2Kg</option>
-                                        <option value="2-10kg">2-10kg</option>
-                                        <option value="10-50kg">10-50kg</option>
-                                        <option value="More than 50kg">More than 50kg</option>
-                                    </select>
-                                    <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-                                        <option selected>Type of product</option>
-                                        <option value="Frozen Food">Frozen Food</option>
-                                        <option value="Dairy">Dairy</option>
-                                        <option value="Raw Meat">Raw Meat</option>
-                                        <option value="Pharma">Pharma</option>
-                                        <option value="Fruits & veggies">Fruits & veggies</option>
-                                        <option value="Ice Cream">Ice Cream</option>
-                                        <option value="Frozen Peas">Frozen Peas</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </div> -->
                                     <div class="col-xl-6 col-lg-4 col-md-6 px-2">
-                                        <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
+                                        <button id="nextButton" class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
                                     </div>
                                     <p id="success-contact-submit"></p>
                                 </div>
@@ -869,6 +843,25 @@
 
             // Initialize Google Maps Autocomplete after the page loads
             google.maps.event.addDomListener(window, "load", initAutocomplete);
+        </script>
+        <script>
+            document.getElementById("nextButton").addEventListener("click", function (event) {
+                event.preventDefault();
+                // Get form values
+                const pickupLocation = document.getElementById("pickup-location").value;
+                const dropLocation = document.getElementById("drop-location").value;
+                const pickupDate = document.getElementById("pickup-date").value;
+                const selectedVehicle = document.getElementById("selected-vehicle").value;
+
+                // Save data in localStorage
+                localStorage.setItem("pickupLocation", pickupLocation);
+                localStorage.setItem("dropLocation", dropLocation);
+                localStorage.setItem("pickupDate", pickupDate);
+                localStorage.setItem("selectedVehicle", selectedVehicle);
+
+                // Redirect to the next page
+                window.location.href = "trucks.html";
+            });
         </script>
 
         <!-- JavaScript Libraries -->
