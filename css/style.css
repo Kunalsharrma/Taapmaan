@@ -446,4 +446,17 @@ body {
     .vehicle-box p{
         font-size: 10px;
     }
+    label{
+        font-size: 12px;
+    }
+    #selected-vehicle{
+        min-height: 38px !important;
+    }
+    .form-control{
+        font-size: 0.7rem;
+    }
+    button{
+        padding: 5px 15px;
+    }
+    
 }
