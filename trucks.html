@@ -28,41 +28,117 @@
         <link href="css/style.css" rel="stylesheet" />
     </head>
     <body>
-        <form id="truckFilterForm">
+        <!-- Topbar Start -->
+        <div class="container-fluid bg-secondaryblueg py-3 px-lg-5 d-none d-lg-block" style="background-color: #d1e9ef">
             <div class="row">
-                <div class="col-xl-2">
-                    <label>Pickup Location:</label>
-                    <input id="pickup-location" type="text" />
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark pr-3" href=""><i class="fa fa-phone-alt mr-2"></i>+012 345 6789</a>
+                        <span class="text-dark">|</span>
+                        <a class="text-dark px-3" href=""><i class="fa fa-envelope mr-2"></i>info@example.com</a>
+                    </div>
                 </div>
-
-                <div class="col-xl-2">
-                    <label>Drop Location:</label>
-                    <input id="drop-location" type="text" />
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                        <a class="text-dark px-3" href="">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a class="text-dark px-3" href="">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a class="text-dark px-3" href="">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a class="text-dark px-3" href="">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-dark pl-3" href="">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
                 </div>
-
-                <div class="col-xl-2">
-                    <label>Pickup Date:</label>
-                    <input id="pickup-date" type="text" />
-                </div>
-
-                <div class="col-xl-2">
-                    <label>Vehicle Type:</label>
-                    <select id="selected-vehicle">
-                        <option value="Frozen">Frozen</option>
-                        <option value="Chiller">Chiller</option>
-                        <option value="Dry">Dry</option>
-                    </select>
-                </div>
-
-                <!-- <div class="col-xl-3"> -->
-                <button type="button" onclick="fetchAvailableTrucks()">Search</button>
-                <!-- </div> -->
             </div>
-        </form>
-
-        <div id="truckList">
-            <!-- Available trucks will be displayed here -->
         </div>
+        <!-- Topbar End -->
+
+        <!-- Navbar Start -->
+        <div class="container-fluid position-relative nav-bar p-0">
+            <div class="position-relative px-lg-5" style="z-index: 9">
+                <nav class="navbar navbar-expand-lg bg-white shadow navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
+                    <a href="" class="navbar-brand">
+                        <img src="img/logo.png" width="180px" />
+                    </a>
+                    <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse justify-content-between px-3" id="navbarCollapse">
+                        <div class="navbar-nav ml-auto py-0">
+                            <a href="index.html" class="nav-item nav-link active">Home</a>
+                            <a href="about.html" class="nav-item nav-link">About</a>
+                            <a href="service.html" class="nav-item nav-link">Service</a>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vehicles</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="car.html" class="dropdown-item">Car Listing</a>
+                                    <a href="detail.html" class="dropdown-item">Car Detail</a>
+                                    <a href="booking.html" class="dropdown-item">Car Booking</a>
+                                </div>
+                            </div>
+                            <div class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gallery</a>
+                                <div class="dropdown-menu rounded-0 m-0">
+                                    <a href="team.html" class="dropdown-item">The Team</a>
+                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                                </div>
+                            </div>
+                            <a href="contact.html" class="nav-item nav-link">Contact</a>
+                            <a href="login.html" class="nav-item nav-link">Login</a>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- Navbar End -->
+        <div class="">
+            <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
+            <div class="d-flex align-items-center justify-content-center">
+                <form id="truckFilterForm">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-3 d-flex flex-column">
+                            <label>Pickup Location:</label>
+                            <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
+                        </div>
+
+                        <div class="col-xl-3 d-flex flex-column">
+                            <label>Drop Location:</label>
+                            <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                        </div>
+
+                        <div class="col-xl-3 d-flex flex-column">
+                            <label>Pickup Date:</label>
+                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                        </div>
+
+                        <div class="col-xl-3 d-flex flex-column">
+                            <label>Vehicle Type:</label>
+                            <select id="selected-vehicle" class="form-control p-2" style="min-height: 50px">
+                                <option value="Frozen">Frozen</option>
+                                <option value="Chiller">Chiller</option>
+                                <option value="Dry">Dry</option>
+                            </select>
+                        </div>
+
+                        <div class="row justify-content-center align-items-center my-3">
+                            <button type="button" onclick="fetchAvailableTrucks()">Search</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr />
+        <div></div>
+
+        <div id="truckResults"></div>
 
         <script src="js/main.js"></script>
 
@@ -134,30 +210,8 @@
                 const dropLocation = document.getElementById("drop-location").value;
                 const pickupDate = document.getElementById("pickup-date").value;
                 const selectedVehicle = document.getElementById("selected-vehicle").value;
-
-                // Fetch available trucks from MongoDB
-                //   fetch('/api/getAvailableTrucks', {
-                //     method: 'POST',
-                //     headers: {
-                //       'Content-Type': 'application/json'
-                //     },
-                //     body: JSON.stringify({ pickupLocation, dropLocation, pickupDate, selectedVehicle })
-                //   })
-                //   .then(response => response.json())
-                //   .then(data => {
-                //     // Display trucks
-                //     const truckList = document.getElementById('truckList');
-                //     truckList.innerHTML = '';
-
-                //     data.trucks.forEach(truck => {
-                //       const truckItem = document.createElement('div');
-                //       truckItem.textContent = `Truck ID: ${truck.id}, Size: ${truck.size}, Temp Range: ${truck.tempRange}`;
-                //       truckList.appendChild(truckItem);
-                //     });
-                //   });
             }
 
-            // Fetch trucks on page load based on initial data
             fetchAvailableTrucks();
         </script>
     </body>
