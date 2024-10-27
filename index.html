@@ -103,122 +103,9 @@
         <!-- Navbar End -->
 
         <!-- Carousel Start -->
-        <div class="container-fluid p-0 position-relative" style="margin-bottom: 90px">
+        <div class="container-fluid p-0 position-relative" style="margin-bottom: 40px">
             <!-- Form Overlay -->
-            <div id="form_overlay_banner" class="form-overlay shadow position-absolute mx-3">
-                <div id="banner_form" class="bg-white rounded-lg">
-                    <h2 class="my-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
-                    <div class="d-flex justify-content-between">
-                        <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
-                            <div class="d-flex align-items-center justify-content-center mb-3">
-                                <i class="fa fa-lg fa-taxi text-secondary"></i>
-                            </div>
-                            <h6 class="text-uppercase mb-3">Logistics</h6>
-                        </div>
-                        <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-cold-storage" onclick="showContent('cold-storage', 'box-cold-storage')">
-                            <div class="d-flex align-items-center justify-content-center mb-3">
-                                <i class="fa fa-lg fa-warehouse text-secondary"></i>
-                            </div>
-                            <h6 class="text-uppercase mb-3">Cold Storage</h6>
-                        </div>
-                        <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-integrated" onclick="showContent('integrated', 'box-integrated')">
-                            <div class="d-flex align-items-center justify-content-center mb-3">
-                                <i class="fa fa-lg fa-infinity text-secondary"></i>
-                            </div>
-                            <h6 class="text-uppercase mb-3">Integrated</h6>
-                        </div>
-                    </div>
-                    <div class="container">
-                        <div class="service-content" id="logistics">
-                            <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
-                                <div class="row mx-n2">
-                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
-                                    </div>
-                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 px-2">
-                                        <div class="vehicle-selection d-flex align-items-center justify-content-center">
-                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
-                                                <img src="img/Frozen.png" width="40px" />
-                                                <p class="text-dark mb-0">Frozen</p>
-                                                <p class="text-dark mt-0">-14°c to -25°c</p>
-                                            </div>
-                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Chiller">
-                                                <img src="img/Chiller.png" width="35px" />
-                                                <p class="text-dark mb-0">Chiller</p>
-                                                <p class="text-dark mt-0">+5°c to -20°c</p>
-                                            </div>
-                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Dry">
-                                                <img src="img/Dry.png" width="40px" />
-                                                <p class="text-dark mb-0">Dry</p>
-                                                <p class="text-dark mt-0">-14°c to -25°c</p>
-                                            </div>
-                                            <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-12 px-2">
-                                        <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
-                                    </div>
-                                    <p id="success-contact-submit"></p>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="service-content" id="cold-storage" style="display: none">
-                            <form class="bg-white rounded" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/formResponse" target="hidden_iframe3" method="post" style="max-width: 80vw">
-                                <div class="row mx-n2">
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
-                                        <input id="storage-location" name="" type="text" class="form-control p-4" placeholder="Storage location" required />
-                                    </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
-                                        <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input type="text" name="" class="form-control p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" />
-                                        </div>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-                                            <option selected>Quantity of product</option>
-                                            <option value="Less than 2Kg">Less than 2Kg</option>
-                                            <option value="2-10kg">2-10kg</option>
-                                            <option value="10-50kg">10-50kg</option>
-                                            <option value="More than 50kg">More than 50kg</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-                                            <option selected>Type of product</option>
-                                            <option value="Frozen Food">Frozen Food</option>
-                                            <option value="Dairy">Dairy</option>
-                                            <option value="Raw Meat">Raw Meat</option>
-                                            <option value="Pharma">Pharma</option>
-                                            <option value="Fruits & veggies">Fruits & veggies</option>
-                                            <option value="Ice Cream">Ice Cream</option>
-                                            <option value="Frozen Peas">Frozen Peas</option>
-                                            <option value="Others">Others</option>
-                                        </select>
-                                    </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2">
-                                        <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
-                                    </div>
-                                    <p id="success-contact-submit"></p>
-                                </div>
-                            </form>
-                        </div>
-
-                        <div class="service-content" id="integrated" style="display: none">
-                            <h2>Integrated Services</h2>
-                            <p>Details about integrated services go here.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
 
             <!-- Carousel -->
             <div id="header-carousel" class="carousel slide" data-ride="carousel">
@@ -258,9 +145,145 @@
         </div>
         <!-- Carousel End -->
 
+        <div id="form_overlay_banner" class="form-overlay mx-3">
+            <div id="banner_form" class="bg-white shadow rounded-lg">
+                <h2 class="my-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
+                <div class="d-flex justify-content-between">
+                    <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa fa-lg fa-taxi text-secondary"></i>
+                        </div>
+                        <h6 class="text-uppercase mb-3">Logistics</h6>
+                    </div>
+                    <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-cold-storage" onclick="showContent('cold-storage', 'box-cold-storage')">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa fa-lg fa-warehouse text-secondary"></i>
+                        </div>
+                        <h6 class="text-uppercase mb-3">Cold Storage</h6>
+                    </div>
+                    <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-integrated" onclick="showContent('integrated', 'box-integrated')">
+                        <div class="d-flex align-items-center justify-content-center mb-3">
+                            <i class="fa fa-lg fa-infinity text-secondary"></i>
+                        </div>
+                        <h6 class="text-uppercase mb-3">Integrated</h6>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="service-content" id="logistics">
+                        <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
+                            <div class="row mx-n2">
+                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                    <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                    <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                                </div>
+                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                    <div class="date mb-3" id="date" data-target-input="nearest">
+                                        <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 px-2">
+                                    <div class="vehicle-selection d-flex align-items-center justify-content-center">
+                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
+                                            <img src="img/Frozen.png" width="40px" />
+                                            <p class="text-dark mb-0">Frozen</p>
+                                            <p class="text-dark mt-0">-14°c to -25°c</p>
+                                        </div>
+                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Chiller">
+                                            <img src="img/Chiller.png" width="35px" />
+                                            <p class="text-dark mb-0">Chiller</p>
+                                            <p class="text-dark mt-0">+5°c to -20°c</p>
+                                        </div>
+                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Dry">
+                                            <img src="img/Dry.png" width="40px" />
+                                            <p class="text-dark mb-0">Dry</p>
+                                            <p class="text-dark mt-0">-14°c to -25°c</p>
+                                        </div>
+                                        <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 px-2">
+                                    <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                        <option selected>Quantity of product</option>
+                                        <option value="Less than 2Kg">Less than 2Kg</option>
+                                        <option value="2-10kg">2-10kg</option>
+                                        <option value="10-50kg">10-50kg</option>
+                                        <option value="More than 50kg">More than 50kg</option>
+                                    </select>
+                                    <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                        <option selected>Type of product</option>
+                                        <option value="Frozen Food">Frozen Food</option>
+                                        <option value="Dairy">Dairy</option>
+                                        <option value="Raw Meat">Raw Meat</option>
+                                        <option value="Pharma">Pharma</option>
+                                        <option value="Fruits & veggies">Fruits & veggies</option>
+                                        <option value="Ice Cream">Ice Cream</option>
+                                        <option value="Frozen Peas">Frozen Peas</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+
+                                </div>
+                                <div class="col-xl-12 px-2">
+                                    <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
+                                </div>
+                                <p id="success-contact-submit"></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="service-content" id="cold-storage" style="display: none">
+                        <form class="bg-white rounded" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/formResponse" target="hidden_iframe3" method="post" style="max-width: 80vw">
+                            <div class="row mx-n2">
+                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
+                                    <input id="storage-location" name="" type="text" class="form-control p-4" placeholder="Storage location" required />
+                                </div>
+                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
+                                    <div class="date mb-3" id="date" data-target-input="nearest">
+                                        <input type="text" name="" class="form-control p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" />
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
+                                    <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                        <option selected>Quantity of product</option>
+                                        <option value="Less than 2Kg">Less than 2Kg</option>
+                                        <option value="2-10kg">2-10kg</option>
+                                        <option value="10-50kg">10-50kg</option>
+                                        <option value="More than 50kg">More than 50kg</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
+                                    <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                        <option selected>Type of product</option>
+                                        <option value="Frozen Food">Frozen Food</option>
+                                        <option value="Dairy">Dairy</option>
+                                        <option value="Raw Meat">Raw Meat</option>
+                                        <option value="Pharma">Pharma</option>
+                                        <option value="Fruits & veggies">Fruits & veggies</option>
+                                        <option value="Ice Cream">Ice Cream</option>
+                                        <option value="Frozen Peas">Frozen Peas</option>
+                                        <option value="Others">Others</option>
+                                    </select>
+                                </div>
+                                <div class="col-xl-6 col-lg-4 col-md-6 px-2">
+                                    <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
+                                </div>
+                                <p id="success-contact-submit"></p>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="service-content" id="integrated" style="display: none">
+                        <h2>Integrated Services</h2>
+                        <p>Details about integrated services go here.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- About Start -->
         <div class="container-fluid py-5">
-            <div class="container pt-5 pb-3">
+            <div class="container pb-3">
                 <!-- <h1 class="display-1 text-primaryorange text-center">01</h1> -->
                 <h1 class="display-4 text-uppercase text-center mb-5">Welcome To <span class="text-primaryorange">Taapmaan</span></h1>
                 <div class="row justify-content-center">

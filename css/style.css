@@ -11,12 +11,15 @@
     background-color: var(--secondary);
 }
 #banner_form {
-    max-width: 45vw;
+    max-width: 60vw;
 }
 #form_overlay_banner {
-    top: 100px;
-    left: 100px;
+    position: relative;
+    top: -150px;
+    left: 300px;
     z-index: 10;
+    width: fit-content;
+    height: fit-content;
 }
 
 .banner_text {
@@ -421,14 +424,19 @@ body {
     #banner_form {
         max-width: 60vw;
     }
+    #form_overlay_banner {
+        top: -120px;
+        left: 190px;
+        z-index: 10;
+    }
 }
 @media only screen and (max-width: 1060px) {
     #banner_form {
         max-width: 80vw;
     }
     #form_overlay_banner {
-        top: 25px;
-        left: 30px;
+        top: -120px;
+        left: 80px;
         z-index: 10;
     }
 }
@@ -445,7 +453,7 @@ body {
         font-size: 12px;
     }
     h2{
-        font-size: 16px;
+        font-size: 18px;
     }
     .vehicle-box p{
         font-size: 10px;
