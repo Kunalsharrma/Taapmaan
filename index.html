@@ -105,8 +105,8 @@
         <!-- Carousel Start -->
         <div class="container-fluid p-0 position-relative" style="margin-bottom: 90px">
             <!-- Form Overlay -->
-            <div class="form-overlay shadow position-absolute m-5" style="top: 25px; left: 100px; z-index: 10; width: 80%">
-                <div class="bg-white rounded-lg" style="max-width: 45vw">
+            <div id="form_overlay_banner" class="form-overlay shadow position-absolute mx-3">
+                <div id="banner_form" class="bg-white rounded-lg">
                     <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
                     <div class="d-flex justify-content-between">
                         <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
@@ -132,18 +132,18 @@
                         <div class="service-content" id="logistics">
                             <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
                                 <div class="row mx-n2">
-                                    <div class="col-xl-4 col-lg-4 col-md-6 px-2 my-2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
                                         <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 px-2 my-2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
                                         <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-md-6 px-2 my-2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
                                         <div class="date mb-3" id="date" data-target-input="nearest">
                                             <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
                                         </div>
                                     </div>
-                                    <div class="col-xl-12 col-lg-4 col-md-6 px-2">
+                                    <div class="col-xl-12 px-2">
                                         <div class="vehicle-selection d-flex align-items-center justify-content-center">
                                             <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-3 m-3" data-value="Frozen">
                                                 <img src="img/Frozen.png" width="40px" />
@@ -163,7 +163,7 @@
                                             <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2">
+                                    <div class="col-xl-12 px-2">
                                         <button id="nextButton" class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
                                     </div>
                                     <p id="success-contact-submit"></p>
