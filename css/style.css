@@ -6,6 +6,10 @@
     --dark: #1c1e32;
 }
 
+
+.navbar-dark .navbar-toggler {
+    background-color: var(--secondary);
+}
 #banner_form {
     max-width: 45vw;
 }
