@@ -41,6 +41,16 @@ button:hover {
     background-color: #f57c00cc;
 }
 
+.milestone_counter{
+    font-size: 45px;
+    color: var(--primary);
+    font-weight: 600;
+}
+.milestone_text{
+    font-size: 18px;
+
+}
+
 .text-primaryorange {
     color: var(--primary);
 }
@@ -126,7 +136,7 @@ h6,
     height: 50%;
     top: 0;
     left: 0;
-    background: #d1e9ef;
+    background: #edf9ff;
 }
 
 .nav-bar::after {

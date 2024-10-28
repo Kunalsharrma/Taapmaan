@@ -138,6 +138,39 @@
 
 
 
+function initMilestones() {
+	if (document.querySelectorAll('.milestone_counter').length) {
+		const milestoneItems = document.querySelectorAll('.milestone_counter');
+		const ctrl = new ScrollMagic.Controller(); // Initialize ScrollMagic controller
+
+		milestoneItems.forEach((ele, i) => {
+			const endValue = parseInt(ele.getAttribute('data-end-value'), 10);
+			const eleValue = parseInt(ele.textContent, 10);
+
+			// Use data-sign-before and data-sign-after to add signs in front or behind the counter number
+			const signBefore = ele.getAttribute('data-sign-before') || "";
+			const signAfter = ele.getAttribute('data-sign-after') || "";
+
+			const milestoneScene = new ScrollMagic.Scene({
+				triggerElement: ele,
+				triggerHook: 0.9, // Trigger slightly before entering viewport
+				reverse: false
+			})
+			.on('start', function() {
+				const counter = { value: eleValue };
+				TweenMax.to(counter, 4, {
+					value: endValue,
+					roundProps: "value",
+					ease: Circ.easeOut,
+					onUpdate: function() {
+						ele.innerHTML = signBefore + Math.round(counter.value) + signAfter;
+					}
+				});
+			})
+			.addTo(ctrl);
+		});
+	}
+}
 
 
 
@@ -169,6 +202,7 @@ function showContent(serviceId, boxId) {
   // Show logistics content by default
   window.onload = function() {
     showContent('logistics', 'box-logistics');
+    initMilestones();
   };
   
 
