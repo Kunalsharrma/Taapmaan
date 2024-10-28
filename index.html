@@ -80,7 +80,8 @@
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Service</a>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
-                            <a href="login.html" class="nav-item nav-link">Login</a> </div>
+                            <a href="login.html" class="nav-item nav-link">Login</a>
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -90,7 +91,6 @@
         <!-- Carousel Start -->
         <div class="container-fluid p-0 position-relative" style="margin-bottom: 40px">
             <!-- Form Overlay -->
-            
 
             <!-- Carousel -->
             <div id="header-carousel" class="carousel slide" data-ride="carousel">
@@ -130,149 +130,148 @@
         </div>
         <!-- Carousel End -->
         <div class="container-fluid form-overlay-container">
-        <div id="form_overlay_banner" class="form-overlay mx-3">
-            <div id="banner_form" class="bg-white shadow rounded-lg">
-                <h2 class="my-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
-                <div class="d-flex justify-content-between">
-                    <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <i class="fa fa-lg fa-taxi text-secondary"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-3">Logistics</h6>
-                    </div>
-                    <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-cold-storage" onclick="showContent('cold-storage', 'box-cold-storage')">
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <i class="fa fa-lg fa-warehouse text-secondary"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-3">Cold Storage</h6>
-                    </div>
-                    <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-integrated" onclick="showContent('integrated', 'box-integrated')">
-                        <div class="d-flex align-items-center justify-content-center mb-3">
-                            <i class="fa fa-lg fa-infinity text-secondary"></i>
-                        </div>
-                        <h6 class="text-uppercase mb-3">Integrated</h6>
-                    </div>
-                </div>
-                <div class="container">
-                    <div class="service-content" id="logistics">
-                        <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
-                            <div class="row mx-n2">
-                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                    <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                    <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                    <div class="date mb-3" id="date" data-target-input="nearest">
-                                        <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 px-2">
-                                    <div class="vehicle-selection d-flex align-items-center justify-content-center">
-                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
-                                            <img src="img/Frozen.png" width="40px" />
-                                            <p class="text-dark mb-0">Frozen</p>
-                                            <p class="text-dark mt-0">-14°c to -25°c</p>
-                                        </div>
-                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Chiller">
-                                            <img src="img/Chiller.png" width="35px" />
-                                            <p class="text-dark mb-0">Chiller</p>
-                                            <p class="text-dark mt-0">+5°c to -20°c</p>
-                                        </div>
-                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Dry">
-                                            <img src="img/Dry.png" width="40px" />
-                                            <p class="text-dark mb-0">Dry</p>
-                                            <p class="text-dark mt-0">-14°c to -25°c</p>
-                                        </div>
-                                        <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 px-2">
-                                    <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-                                        <option selected>Quantity of product</option>
-                                        <option value="Less than 2Kg">Less than 2Kg</option>
-                                        <option value="2-10kg">2-10kg</option>
-                                        <option value="10-50kg">10-50kg</option>
-                                        <option value="More than 50kg">More than 50kg</option>
-                                    </select>
-                                    <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-                                        <option selected>Type of product</option>
-                                        <option value="Frozen Food">Frozen Food</option>
-                                        <option value="Dairy">Dairy</option>
-                                        <option value="Raw Meat">Raw Meat</option>
-                                        <option value="Pharma">Pharma</option>
-                                        <option value="Fruits & veggies">Fruits & veggies</option>
-                                        <option value="Ice Cream">Ice Cream</option>
-                                        <option value="Frozen Peas">Frozen Peas</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-
-                                </div>
-                                <div class="col-xl-12 px-2">
-                                    <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
-                                </div>
-                                <p id="success-contact-submit"></p>
+            <div id="form_overlay_banner" class="form-overlay mx-3">
+                <div id="banner_form" class="bg-white shadow rounded-lg">
+                    <h2 class="my-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
+                    <div class="d-flex justify-content-between">
+                        <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <i class="fa fa-lg fa-taxi text-secondary"></i>
                             </div>
-                        </form>
-                    </div>
-
-                    <div class="service-content" id="cold-storage" style="display: none">
-                        <form class="bg-white rounded" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/formResponse" target="hidden_iframe3" method="post" style="max-width: 80vw">
-                            <div class="row mx-n2">
-                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
-                                    <input id="storage-location" name="" type="text" class="form-control p-4" placeholder="Storage location" required />
-                                </div>
-                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
-                                    <div class="date mb-3" id="date" data-target-input="nearest">
-                                        <input type="text" name="" class="form-control p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" />
-                                    </div>
-                                </div>
-                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                    <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-                                        <option selected>Quantity of product</option>
-                                        <option value="Less than 2Kg">Less than 2Kg</option>
-                                        <option value="2-10kg">2-10kg</option>
-                                        <option value="10-50kg">10-50kg</option>
-                                        <option value="More than 50kg">More than 50kg</option>
-                                    </select>
-                                </div>
-                                <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                    <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-                                        <option selected>Type of product</option>
-                                        <option value="Frozen Food">Frozen Food</option>
-                                        <option value="Dairy">Dairy</option>
-                                        <option value="Raw Meat">Raw Meat</option>
-                                        <option value="Pharma">Pharma</option>
-                                        <option value="Fruits & veggies">Fruits & veggies</option>
-                                        <option value="Ice Cream">Ice Cream</option>
-                                        <option value="Frozen Peas">Frozen Peas</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-                                </div>
-                                <div class="col-xl-6 col-lg-4 col-md-6 px-2">
-                                    <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
-                                </div>
-                                <p id="success-contact-submit"></p>
+                            <h6 class="text-uppercase mb-3">Logistics</h6>
+                        </div>
+                        <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-cold-storage" onclick="showContent('cold-storage', 'box-cold-storage')">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <i class="fa fa-lg fa-warehouse text-secondary"></i>
                             </div>
-                        </form>
+                            <h6 class="text-uppercase mb-3">Cold Storage</h6>
+                        </div>
+                        <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-integrated" onclick="showContent('integrated', 'box-integrated')">
+                            <div class="d-flex align-items-center justify-content-center mb-3">
+                                <i class="fa fa-lg fa-infinity text-secondary"></i>
+                            </div>
+                            <h6 class="text-uppercase mb-3">Integrated</h6>
+                        </div>
                     </div>
-
-                    <div class="service-content" id="integrated"  style="max-width: 80vw">
-                        <form class="bg-white rounded" id="integratedForm" style="max-width: 80vw">
-                            <div class="row mx-n2">
-                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                    <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                    <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                    <div class="date mb-3" id="date" data-target-input="nearest">
-                                        <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                    <div class="container">
+                        <div class="service-content" id="logistics">
+                            <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
+                                <div class="row mx-n2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                        <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
                                     </div>
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                        <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                        <div class="date mb-3" id="date" data-target-input="nearest">
+                                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 px-2">
+                                        <div class="vehicle-selection d-flex align-items-center justify-content-center">
+                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
+                                                <img src="img/Frozen.png" width="40px" />
+                                                <p class="text-dark mb-0">Frozen</p>
+                                                <p class="text-dark mt-0">-14°c to -25°c</p>
+                                            </div>
+                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Chiller">
+                                                <img src="img/Chiller.png" width="35px" />
+                                                <p class="text-dark mb-0">Chiller</p>
+                                                <p class="text-dark mt-0">+5°c to -20°c</p>
+                                            </div>
+                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Dry">
+                                                <img src="img/Dry.png" width="40px" />
+                                                <p class="text-dark mb-0">Dry</p>
+                                                <p class="text-dark mt-0">-14°c to -25°c</p>
+                                            </div>
+                                            <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 px-2">
+                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                            <option selected>Quantity of product</option>
+                                            <option value="Less than 2Kg">Less than 2Kg</option>
+                                            <option value="2-10kg">2-10kg</option>
+                                            <option value="10-50kg">10-50kg</option>
+                                            <option value="More than 50kg">More than 50kg</option>
+                                        </select>
+                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                            <option selected>Type of product</option>
+                                            <option value="Frozen Food">Frozen Food</option>
+                                            <option value="Dairy">Dairy</option>
+                                            <option value="Raw Meat">Raw Meat</option>
+                                            <option value="Pharma">Pharma</option>
+                                            <option value="Fruits & veggies">Fruits & veggies</option>
+                                            <option value="Ice Cream">Ice Cream</option>
+                                            <option value="Frozen Peas">Frozen Peas</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-12 px-2">
+                                        <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
+                                    </div>
+                                    <p id="success-contact-submit"></p>
                                 </div>
-                                <!-- <div class="col-xl-6 px-2">
+                            </form>
+                        </div>
+
+                        <div class="service-content" id="cold-storage" style="display: none">
+                            <form class="bg-white rounded" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/formResponse" target="hidden_iframe3" method="post" style="max-width: 80vw">
+                                <div class="row mx-n2">
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
+                                        <input id="storage-location" name="" type="text" class="form-control p-4" placeholder="Storage location" required />
+                                    </div>
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
+                                        <div class="date mb-3" id="date" data-target-input="nearest">
+                                            <input type="text" name="" class="form-control p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" />
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
+                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                            <option selected>Quantity of product</option>
+                                            <option value="Less than 2Kg">Less than 2Kg</option>
+                                            <option value="2-10kg">2-10kg</option>
+                                            <option value="10-50kg">10-50kg</option>
+                                            <option value="More than 50kg">More than 50kg</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
+                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                            <option selected>Type of product</option>
+                                            <option value="Frozen Food">Frozen Food</option>
+                                            <option value="Dairy">Dairy</option>
+                                            <option value="Raw Meat">Raw Meat</option>
+                                            <option value="Pharma">Pharma</option>
+                                            <option value="Fruits & veggies">Fruits & veggies</option>
+                                            <option value="Ice Cream">Ice Cream</option>
+                                            <option value="Frozen Peas">Frozen Peas</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2">
+                                        <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
+                                    </div>
+                                    <p id="success-contact-submit"></p>
+                                </div>
+                            </form>
+                        </div>
+
+                        <div class="service-content" id="integrated" style="max-width: 80vw">
+                            <form class="bg-white rounded" id="integratedForm" style="max-width: 80vw">
+                                <div class="row mx-n2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                        <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                        <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                                    </div>
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                        <div class="date mb-3" id="date" data-target-input="nearest">
+                                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xl-6 px-2">
                                     <div class="vehicle-selection d-flex align-items-center justify-content-center">
                                         <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
                                             <img src="img/Frozen.png" width="40px" />
@@ -292,39 +291,38 @@
                                         <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
                                     </div>
                                 </div> -->
-                                <div class="col-xl-6 px-2">
-                                    <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-                                        <option selected>Quantity of product</option>
-                                        <option value="Less than 2Kg">Less than 2Kg</option>
-                                        <option value="2-10kg">2-10kg</option>
-                                        <option value="10-50kg">10-50kg</option>
-                                        <option value="More than 50kg">More than 50kg</option>
-                                    </select>
+                                    <div class="col-xl-6 px-2">
+                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                            <option selected>Quantity of product</option>
+                                            <option value="Less than 2Kg">Less than 2Kg</option>
+                                            <option value="2-10kg">2-10kg</option>
+                                            <option value="10-50kg">10-50kg</option>
+                                            <option value="More than 50kg">More than 50kg</option>
+                                        </select>
                                     </div>
                                     <div class="col-xl-6 px-2">
-                                    <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-                                        <option selected>Type of product</option>
-                                        <option value="Frozen Food">Frozen Food</option>
-                                        <option value="Dairy">Dairy</option>
-                                        <option value="Raw Meat">Raw Meat</option>
-                                        <option value="Pharma">Pharma</option>
-                                        <option value="Fruits & veggies">Fruits & veggies</option>
-                                        <option value="Ice Cream">Ice Cream</option>
-                                        <option value="Frozen Peas">Frozen Peas</option>
-                                        <option value="Others">Others</option>
-                                    </select>
-
+                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                            <option selected>Type of product</option>
+                                            <option value="Frozen Food">Frozen Food</option>
+                                            <option value="Dairy">Dairy</option>
+                                            <option value="Raw Meat">Raw Meat</option>
+                                            <option value="Pharma">Pharma</option>
+                                            <option value="Fruits & veggies">Fruits & veggies</option>
+                                            <option value="Ice Cream">Ice Cream</option>
+                                            <option value="Frozen Peas">Frozen Peas</option>
+                                            <option value="Others">Others</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-xl-12 px-2">
+                                        <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
+                                    </div>
+                                    <p id="success-contact-submit"></p>
                                 </div>
-                                <div class="col-xl-12 px-2">
-                                    <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
-                                </div>
-                                <p id="success-contact-submit"></p>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
         </div>
 
         <!-- About Start -->
@@ -344,24 +342,24 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-lg-4 mb-2">
-                        <div class="bg-greyishblue d-flex align-items-center p-4 mb-4" style="height: 150px">
-                            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primaryorange ml-n4 mr-4" style="width: 100px; height: 100px">
+                        <div class="bg- d-flex align-items-center p-4 mb-4" style="height: 150px">
+                            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondaryblue ml-n4 mr-4" style="width: 100px; height: 100px">
                                 <i class="fa fa-2x fa-warehouse text-secondary"></i>
                             </div>
                             <h4 class="text-uppercase m-0">30+ Multi-temp Warehouses</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-2">
-                        <div class="bg-greyishblue d-flex align-items-center p-4 mb-4" style="height: 150px">
-                            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primaryorange ml-n4 mr-4" style="width: 100px; height: 100px">
+                        <div class="bg- d-flex align-items-center p-4 mb-4" style="height: 150px">
+                            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondaryblue ml-n4 mr-4" style="width: 100px; height: 100px">
                                 <i class="fa fa-2x fa-truck-moving text-secondary"></i>
                             </div>
                             <h4 class="text-uppercase m-0">40+ Refrigerated Vehicles</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 mb-2">
-                        <div class="bg-greyishblue d-flex align-items-center p-4 mb-4" style="height: 150px">
-                            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-primaryorange ml-n4 mr-4" style="width: 100px; height: 100px">
+                        <div class="bg- d-flex align-items-center p-4 mb-4" style="height: 150px">
+                            <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondaryblue ml-n4 mr-4" style="width: 100px; height: 100px">
                                 <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
                             </div>
                             <h4 class="text-uppercase m-0">15000+ Pallet Positions</h4>
@@ -372,155 +370,49 @@
         </div>
         <!-- About End -->
 
-        <!-- Services Start -->
-        <!-- <div class="container-fluid py-5">
-            <div class="container pt-5 pb-3"> -->
-                <!-- <h1 class="display-1 text-primaryorange text-center">02</h1> -->
-                <!-- <h1 class="display-4 text-uppercase text-center mb-5">Our Services</h1>
-            </div>
-        </div> -->
-        <!-- Services End -->
-
-        <!-- Banner Start -->
-        <!-- <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="bg-banner py-5 px-4 text-center">
-                    <div class="py-5">
-                        <h1 class="display-1 text-uppercase text-primaryorange mb-4">50% OFF</h1>
-                        <h1 class="text-uppercase text-light mb-4">Special Offer For New Members</h1>
-                        <p class="mb-4">Only for Sunday from 1st Jan to 30th Jan 2045</p>
-                        <a class="btn btn-primaryorange mt-2 py-3 px-5" href="">Register Now</a>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Banner End -->
-
         <!-- Rent A Car Start -->
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5" style="background-color: #edf9ff">
             <div class="container pt-5 pb-3">
                 <!-- <h1 class="display-1 text-primaryorange text-center">03</h1> -->
-                <h1 class="display-4 text-uppercase text-center mb-5">Our Vehicles</h1>
+                <h1 class="display-4 text-uppercase text-center mb-5"><span class="text-primaryorange">Store & Transport</span> Your Perishables</h1>
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/truck1.png" alt="" />
-                            
-                            <div class="d-flex justify-content-center mb-4">
-                                <div class="px-2">
-                                    <i class="fa fa-car text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2 border-left border-right">
-                                    <i class="fa fa-cogs text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2">
-                                    <i class="fa fa-road text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                            </div>
-                            
+                            <img class="img-fluid mb-4" src="img/dairy.png" width="150px" alt="" />
+                            <h4>Dairy & Refrigerated Products</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item active mb-4">
-                            <img class="img-fluid mb-4" src="img/Truck2.png" alt="" />
-                            
-                            <div class="d-flex justify-content-center mb-4">
-                                <div class="px-2">
-                                    <i class="fa fa-car text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2 border-left border-right">
-                                    <i class="fa fa-cogs text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2">
-                                    <i class="fa fa-road text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                            </div>
-                            
+                            <img class="img-fluid mb-4" src="img/fruitsndvegg.png" width="150px" alt="" />
+                            <h4>Fruits & Vegetables</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/truck3.png" alt="" />
-                            
-                            <div class="d-flex justify-content-center mb-4">
-                                <div class="px-2">
-                                    <i class="fa fa-car text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2 border-left border-right">
-                                    <i class="fa fa-cogs text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2">
-                                    <i class="fa fa-road text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                            </div>
-                            
+                            <img class="img-fluid mb-4" src="img/frozenFood.png" width="150px" alt="" />
+
+                            <h4>Processed & Frozen Foods</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/truck4.png" alt="" />
-                            
-                            <div class="d-flex justify-content-center mb-4">
-                                <div class="px-2">
-                                    <i class="fa fa-car text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2 border-left border-right">
-                                    <i class="fa fa-cogs text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2">
-                                    <i class="fa fa-road text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                            </div>
-                            
+                            <img class="img-fluid mb-4" src="img/snacks.png" width="150px" alt="" />
+
+                            <h4>Dry Goods & Snacks</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/truck5.png" alt="" />
-                            
-                            <div class="d-flex justify-content-center mb-4">
-                                <div class="px-2">
-                                    <i class="fa fa-car text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2 border-left border-right">
-                                    <i class="fa fa-cogs text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                                <div class="px-2">
-                                    <i class="fa fa-road text-primaryorange mr-1"></i>
-                                    
-                                </div>
-                            </div>
-                            
+                            <img class="img-fluid mb-4" src="img/chemicalprod.png" width="150px" alt="" />
+
+                            <h4>Industrial & Chemical</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/truck6.png" alt="" />
-                            <div class="d-flex justify-content-center mb-4">
-                                <div class="px-2">
-                                    <i class="fa fa-car text-primaryorange mr-1"></i>
-                                </div>
-                                <div class="px-2 border-left border-right">
-                                    <i class="fa fa-cogs text-primaryorange mr-1"></i>
-                                </div>
-                                <div class="px-2">
-                                    <i class="fa fa-road text-primaryorange mr-1"></i>
-                                </div>
-                            </div>
+                            <img class="img-fluid mb-4" src="img/merchandise.png" width="150px" alt="" />
+                            <h4>FMCG & General Merchandise</h4>
                         </div>
                     </div>
                 </div>
@@ -536,8 +428,8 @@
                     <div class="team-item">
                         <img class="img-fluid w-100" src="img/team-1.jpg" alt="" />
                         <div class="position-relative py-4">
-                            <h4 class="text-uppercase">Full Name</h4>
-                            <p class="m-0">Designation</p>
+                            <h4 class="text-uppercase">Tanishq Sharma</h4>
+                            <p class="m-0">Co- Founder</p>
                             <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -586,37 +478,8 @@
         </div>
         <!-- Team End -->
 
-        <!-- Banner Start -->
-        <!-- <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="row mx-0">
-                    <div class="col-lg-6 px-0">
-                        <div class="px-5 bg-secondaryblue d-flex align-items-center justify-content-between" style="height: 350px">
-                            <img class="img-fluid flex-shrink-0 ml-n5 w-50 mr-4" src="img/banner-left.png" alt="" />
-                            <div class="text-right">
-                                <h3 class="text-uppercase text-light mb-3">Want to be driver?</h3>
-                                <p class="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
-                                <a class="btn btn-primaryorange py-2 px-4" href="">Start Now</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 px-0">
-                        <div class="px-5 bg-lightorange d-flex align-items-center justify-content-between" style="height: 350px">
-                            <div class="text-left">
-                                <h3 class="text-uppercase text-secondaryblue mb-3">Want a vehicle?</h3>
-                                <p class="mb-4">Lorem justo sit sit ipsum eos lorem kasd, kasd labore</p>
-                                <a class="btn btn-primaryorange py-2 px-4" href="">Start Now</a>
-                            </div>
-                            <img class="img-fluid flex-shrink-0 mr-n5 w-50 ml-4" src="img/banner-right.png" alt="" />
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Banner End -->
-
         <!-- Testimonial Start -->
-        <div class="container-fluid py-5">
+        <div class="container-fluid py-5" style="background-color: #edf9ff">
             <div class="container py-5">
                 <h1 class="display-4 text-uppercase text-center mb-5">Our Client's Say</h1>
                 <div class="owl-carousel testimonial-carousel">
@@ -667,7 +530,7 @@
                 <h1 class="display-4 text-uppercase text-center mb-5">Contact Us</h1>
                 <div class="row">
                     <div class="col-lg-7 mb-2">
-                        <div class="contact-form bg-light mb-4" style="padding: 30px">
+                        <div class="contact-form bg-secondaryblue mb-4" style="padding: 30px">
                             <form>
                                 <div class="row">
                                     <div class="col-6 form-group">
@@ -690,33 +553,19 @@
                         </div>
                     </div>
                     <div class="col-lg-5 mb-2">
-                        <div class="bg-secondaryblue d-flex flex-column justify-content-center px-5 mb-4" style="height: 435px">
+                        <div class="d-flex flex-column justify-content-center px-5 mb-4" style="height: 435px">
                             <div class="d-flex mb-3">
                                 <i class="fa fa-2x fa-map-marker-alt text-primaryorange flex-shrink-0 mr-3"></i>
                                 <div class="mt-n1">
-                                    <h5 class="text-light">Coorperate Office</h5>
-                                    <p>Sector 16A, SEO 59 lower ground floor</p>
+                                    <h5 class="text-dark">Coorperate Office</h5>
+                                    <p class="text-dark">Sector 16A, SEO 59 lower ground floor</p>
                                 </div>
                             </div>
-                            <!-- <div class="d-flex mb-3">
-                                <i class="fa fa-2x fa-map-marker-alt text-primaryorange flex-shrink-0 mr-3"></i>
-                                <div class="mt-n1">
-                                    <h5 class="text-light">Branch Office</h5>
-                                    <p>123 Street, New York, USA</p>
-                                </div>
-                            </div> -->
                             <div class="d-flex mb-3">
                                 <i class="fa fa-2x fa-envelope-open text-primaryorange flex-shrink-0 mr-3"></i>
                                 <div class="mt-n1">
-                                    <h5 class="text-light">Customer Service</h5>
-                                    <p>Taapmaanlive@gmail.com</p>
-                                </div>
-                            </div>
-                            <div class="d-flex">
-                                <i class="fa fa-2x fa-envelope-open text-primaryorange flex-shrink-0 mr-3"></i>
-                                <div class="mt-n1">
-                                    <h5 class="text-light">Return & Refund</h5>
-                                    <p class="m-0">Taapmaanlive@gmail.com</p>
+                                    <h5 class="text-dark">Customer Service</h5>
+                                    <p class="text-dark">Taapmaanlive@gmail.com</p>
                                 </div>
                             </div>
                         </div>
@@ -911,16 +760,16 @@
         </script>
 
         <!-- JavaScript Libraries -->
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
-    <script src="lib/easing/easing.min.js"></script>
-    <script src="lib/waypoints/waypoints.min.js"></script>
-    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
-    <script src="lib/tempusdominus/js/moment.min.js"></script>
-    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
-    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
 
-    <!-- Template Javascript -->
-    <script src="js/main.js"></script>
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
     </body>
 </html>
