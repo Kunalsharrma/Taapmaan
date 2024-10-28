@@ -6,6 +6,9 @@
     --dark: #1c1e32;
 }
 
+.form-overlay-container{
+    height: 0px;
+}
 
 .navbar-dark .navbar-toggler {
     background-color: var(--secondary);
@@ -15,8 +18,8 @@
 }
 #form_overlay_banner {
     position: relative;
-    top: -150px;
-    left: 300px;
+    top: -750px;
+    left: 100px;
     z-index: 10;
     width: fit-content;
     height: fit-content;
@@ -422,12 +425,15 @@ body {
 /* media queries  */
 @media only screen and (max-width: 1402px) {
     #banner_form {
-        max-width: 60vw;
+        max-width: 90vw;
     }
     #form_overlay_banner {
-        top: -120px;
-        left: 190px;
+        top: -320px;
+        left: 40px;
         z-index: 10;
+    }
+    .form-overlay-container{
+        height: 350px;
     }
 }
 @media only screen and (max-width: 1060px) {
@@ -435,9 +441,12 @@ body {
         max-width: 80vw;
     }
     #form_overlay_banner {
-        top: -120px;
+        top: -220px;
         left: 80px;
         z-index: 10;
+    }
+    .form-overlay-container{
+        height: 500px;
     }
 }
 @media only screen and (max-width: 800px) {
@@ -469,6 +478,9 @@ body {
     }
     button{
         padding: 5px 15px;
+    }
+    .form-overlay-container{
+        height: fit-content;
     }
     
 }
