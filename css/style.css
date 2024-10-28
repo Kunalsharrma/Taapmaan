@@ -48,7 +48,7 @@ button:hover {
 }
 .milestone_text{
     font-size: 18px;
-
+    
 }
 
 .text-primaryorange {
@@ -136,7 +136,7 @@ h6,
     height: 50%;
     top: 0;
     left: 0;
-    background: #edf9ff;
+    background: #d1e9ef;
 }
 
 .nav-bar::after {
