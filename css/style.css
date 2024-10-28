@@ -15,8 +15,8 @@
 }
 #form_overlay_banner {
     position: relative;
-    top: -150px;
-    left: 300px;
+    top: -750px;
+    left: 100px;
     z-index: 10;
     width: fit-content;
     height: fit-content;
