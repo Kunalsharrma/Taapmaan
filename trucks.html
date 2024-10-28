@@ -141,7 +141,7 @@
         <hr />
         <div></div>
 
-        <div id="truckResults"></div>
+        <div id="vehicleResults" class="row justify-content-center mt-4"></div>
 
         <script src="js/main.js"></script>
 
@@ -208,11 +208,46 @@
             document.getElementById("pickup-date").value = localStorage.getItem("pickupDate");
             document.getElementById("selected-vehicle").value = localStorage.getItem("selectedVehicle");
 
-            function fetchAvailableTrucks() {
+            async function fetchAvailableTrucks() {
                 const pickupLocation = document.getElementById("pickup-location").value;
                 const dropLocation = document.getElementById("drop-location").value;
                 const pickupDate = document.getElementById("pickup-date").value;
                 const selectedVehicle = document.getElementById("selected-vehicle").value;
+
+                try {
+                    const response = await fetch("http://localhost:3000/api/vehicles");
+                    const data = await response.json();
+
+                    console.log("Fetched vehicles:", data); // Check the structure to confirm
+
+                    const vehicleResults = document.getElementById("vehicleResults");
+                    vehicleResults.innerHTML = ""; // Clear previous results
+
+                    // Access the nested array, assuming it’s inside `data`
+                    const vehicles = data.myData;
+
+                    if (!Array.isArray(vehicles)) {
+                        vehicleResults.innerHTML = "<p>Unexpected response format. No vehicles available.</p>";
+                        return;
+                    }
+
+                    // Display each vehicle
+                    vehicles.forEach((vehicle) => {
+                        const vehicleCard = document.createElement("div");
+                        vehicleCard.className = "col-md-3 m-2 p-3 border rounded";
+                        vehicleCard.innerHTML = `
+                <h5>Type: ${vehicle.vehicleType}</h5>
+                <p><strong>Size:</strong> ${vehicle.size}</p>
+                <p><strong>Temperature Range:</strong> ${vehicle.tempRange}</p>
+                <p><strong>Pickup Location:</strong> ${vehicle.pickupLocation}</p>
+                <p><strong>Drop Location:</strong> ${vehicle.dropLocation}</p>
+            `;
+                        vehicleResults.appendChild(vehicleCard);
+                    });
+                } catch (error) {
+                    console.error("Error fetching vehicles:", error);
+                    vehicleResults.innerHTML = "<p>Unable to fetch vehicle data.</p>";
+                }
             }
 
             fetchAvailableTrucks();
