@@ -6,6 +6,19 @@
     --dark: #1c1e32;
 }
 
+
+
+.price-estimation {
+    height: fit-content;
+    position: sticky;
+    top: 15vh;
+    bottom: 6vh;
+}
+.all-vehicles{
+    position: relative;
+}
+
+
 .form-overlay-container{
     height: 0px;
 }
@@ -34,7 +47,7 @@
 }
 
 .btn-priceestimation{
-    background-color: var(--secondary);
+    background-color: #97c5e7;
 }
 .btn-priceestimation:hover{
     background-color: #97c5e7;

@@ -169,14 +169,15 @@
                                         </div>
                                     </div>
                                     <div class="col-xl-6 px-2">
-                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                        <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
                                             <option selected>Quantity of product</option>
-                                            <option value="Less than 2Kg">Less than 2Kg</option>
-                                            <option value="2-10kg">2-10kg</option>
-                                            <option value="10-50kg">10-50kg</option>
-                                            <option value="More than 50kg">More than 50kg</option>
+                                            <option value="0-100Kg">00-100Kg</option>
+                                            <option value="100-250kg">100-250kg</option>
+                                            <option value="250-700kg">250-700kg</option>
+                                            <option value="700-1000kg">700-1000kg</option>
+                                            <option value="1000-8000kg">1000-8000kg</option>
                                         </select>
-                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                        <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
                                             <option selected>Type of product</option>
                                             <option value="Frozen Food">Frozen Food</option>
                                             <option value="Dairy">Dairy</option>
@@ -756,12 +757,16 @@
                 const dropLocation = document.getElementById("drop-location").value;
                 const pickupDate = document.getElementById("pickup-date").value;
                 const selectedVehicle = document.getElementById("selected-vehicle").value;
+                const quantityProduct = document.getElementById("quantity-product").value;
+                const typeProduct = document.getElementById("type-product").value;
 
                 // Save data in localStorage
                 localStorage.setItem("pickupLocation", pickupLocation);
                 localStorage.setItem("dropLocation", dropLocation);
                 localStorage.setItem("pickupDate", pickupDate);
                 localStorage.setItem("selectedVehicle", selectedVehicle);
+                localStorage.setItem("quantityProduct", quantityProduct);
+                localStorage.setItem("typeProduct", typeProduct);
 
                 // Redirect to the next page
                 window.location.href = "trucks.html";

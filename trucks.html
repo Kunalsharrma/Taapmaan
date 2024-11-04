@@ -107,27 +107,52 @@
             <div class="d-flex align-items-center justify-content-center my-4">
                 <form id="truckFilterForm">
                     <div class="row justify-content-center">
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Pickup Location:</label>
                             <input id="pickup-location" type="text" class="form-control p-3" placeholder="Enter pickup location" required />
                         </div>
 
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Drop Location:</label>
                             <input id="drop-location" type="text" class="form-control p-3" placeholder="Enter drop location" required />
                         </div>
 
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Pickup Date:</label>
                             <input id="pickup-date" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
                         </div>
 
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Vehicle Type:</label>
                             <select id="selected-vehicle" class="form-control p-2" style="min-height: 50px">
                                 <option value="Frozen">Frozen</option>
                                 <option value="Chiller">Chiller</option>
                                 <option value="Dry">Dry</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
+                            <label>Quantity Of Product:</label>
+                            <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                <option selected>Quantity of product</option>
+                                <option value="0-100Kg">00-100Kg</option>
+                                <option value="100-250kg">100-250kg</option>
+                                <option value="250-700kg">250-700kg</option>
+                                <option value="700-1000kg">700-1000kg</option>
+                                <option value="1000-8000kg">1000-8000kg</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
+                            <label>Type Of Product:</label>
+                            <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                <option selected>Type of product</option>
+                                <option value="Frozen Food">Frozen Food</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Raw Meat">Raw Meat</option>
+                                <option value="Pharma">Pharma</option>
+                                <option value="Fruits & veggies">Fruits & veggies</option>
+                                <option value="Ice Cream">Ice Cream</option>
+                                <option value="Frozen Peas">Frozen Peas</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
 
@@ -140,14 +165,15 @@
         </div>
         <hr />
 
-        <div class="row">
+        <div class="all-vehicles row">
             <div id="vehicleResults" class="col-md-9 row justify-content-center mt-4"></div>
-            <div class="col-md-3">Price estimation here
-                <div class="rounded border bg-light">
+            <!-- <div class="price-estimation col-md-3">
+                <div class="rounded border bg-secondaryblue">
                     <h5 class="text-center">Price Estimation</h5>
-                    
+                    <div class="result"></div>    
+                    <button id="checkLocations">Location</button>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <script src="js/main.js"></script>
@@ -214,12 +240,16 @@
             document.getElementById("drop-location").value = localStorage.getItem("dropLocation");
             document.getElementById("pickup-date").value = localStorage.getItem("pickupDate");
             document.getElementById("selected-vehicle").value = localStorage.getItem("selectedVehicle");
+            document.getElementById("quantity-product").value = localStorage.getItem("quantityProduct");
+            document.getElementById("type-product").value = localStorage.getItem("typeProduct");
 
             async function fetchAvailableTrucks() {
                 const pickupLocation = document.getElementById("pickup-location").value;
                 const dropLocation = document.getElementById("drop-location").value;
                 const pickupDate = document.getElementById("pickup-date").value;
                 const selectedVehicle = document.getElementById("selected-vehicle").value;
+                const quantityProduct = document.getElementById("quantity-product").value;
+                const typeProduct = document.getElementById("type-product").value;
 
                 try {
                     // Fetch data directly from the local vehicles.json file
@@ -257,7 +287,7 @@
                 </div>
                 <div class="m-2">
                             <button type="button" class="btn-booknow">Book Now</button>
-                            <button type="button" class="btn-priceestimation">Price Estimation</button>
+                            <div class="result"></div> 
                         </div>`;
 
                         vehicleResults.appendChild(vehicleCard);
@@ -270,6 +300,10 @@
 
             fetchAvailableTrucks();
         </script>
+
+        <!-- calculate price  -->
+
+        <script src="js/priceEstimation.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
