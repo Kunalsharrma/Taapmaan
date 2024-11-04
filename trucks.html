@@ -139,9 +139,16 @@
             </div>
         </div>
         <hr />
-        <div></div>
 
-        <div id="vehicleResults" class="row justify-content-center mt-4"></div>
+        <div class="row">
+            <div id="vehicleResults" class="col-md-9 row justify-content-center mt-4"></div>
+            <div class="col-md-3">Price estimation here
+                <div class="rounded border bg-light">
+                    <h5 class="text-center">Price Estimation</h5>
+                    
+                </div>
+            </div>
+        </div>
 
         <script src="js/main.js"></script>
 
@@ -215,7 +222,8 @@
                 const selectedVehicle = document.getElementById("selected-vehicle").value;
 
                 try {
-                    const response = await fetch("http://localhost:3000/api/vehicles");
+                    // Fetch data directly from the local vehicles.json file
+                    const response = await fetch("vehicles.json");
                     const data = await response.json();
 
                     console.log("Fetched vehicles:", data); // Check the structure to confirm
@@ -224,7 +232,7 @@
                     vehicleResults.innerHTML = ""; // Clear previous results
 
                     // Access the nested array, assuming it’s inside `data`
-                    const vehicles = data.myData;
+                    const vehicles = data; // Adjust this based on the actual structure of vehicles.json
 
                     if (!Array.isArray(vehicles)) {
                         vehicleResults.innerHTML = "<p>Unexpected response format. No vehicles available.</p>";
@@ -234,14 +242,24 @@
                     // Display each vehicle
                     vehicles.forEach((vehicle) => {
                         const vehicleCard = document.createElement("div");
-                        vehicleCard.className = "col-md-3 m-2 p-3 border rounded";
+                        vehicleCard.className = "col-md-9 my-2 p-0 border rounded";
                         vehicleCard.innerHTML = `
-                <h5>Type: ${vehicle.vehicleType}</h5>
-                <p><strong>Size:</strong> ${vehicle.size}</p>
-                <p><strong>Temperature Range:</strong> ${vehicle.tempRange}</p>
-                <p><strong>Pickup Location:</strong> ${vehicle.pickupLocation}</p>
-                <p><strong>Drop Location:</strong> ${vehicle.dropLocation}</p>
-            `;
+                <div class="bg-light d-flex justify-content-between">
+                    <h5 class="p-2">${vehicle.vehicleName} (${vehicle.id})</h5>
+                    <h5 class="p-2">Runs On: M T W T F S S</h5>
+                </div>
+                <div class="p-2">
+                    <div class="d-flex justify-content-between">    
+                    <p><strong>Locations Covered:</strong> ${vehicle.startFrom},${vehicle.dropLocations}</p>
+                    </div>
+                    <p><strong>Size:</strong> ${vehicle.capacity} Kg (${vehicle.size})</p>
+                    <p><strong>Temperature Range:</strong> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
+                </div>
+                <div class="m-2">
+                            <button type="button" class="btn-booknow">Book Now</button>
+                            <button type="button" class="btn-priceestimation">Price Estimation</button>
+                        </div>`;
+
                         vehicleResults.appendChild(vehicleCard);
                     });
                 } catch (error) {
