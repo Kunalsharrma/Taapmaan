@@ -119,27 +119,52 @@
             <div class="d-flex align-items-center justify-content-center my-4">
                 <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI0DLpNsUX2LF37T8BZw4r7o-K43pOEh0ZAOANpXhELGlPww/formResponse" method="post"  target="hidden_iframe3" id="truckFilterForm">
                     <div class="row justify-content-center">
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Pickup Location:</label>
                             <input id="pickup-location" name="entry.1226122781 type="text" class="form-control p-3" placeholder="Enter pickup location" required />
                         </div>
 
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Drop Location:</label>
                             <input id="drop-location" name="entry.68159007" type="text" class="form-control p-3" placeholder="Enter drop location" required />
                         </div>
 
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Pickup Date:</label>
                             <input id="pickup-date" name="entry.989363744" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
                         </div>
 
-                        <div class="col-xl-3 col-6 d-flex flex-column my-2">
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Vehicle Type:</label>
                             <select id="selected-vehicle" name="entry.2143236161" class="form-control p-2" style="min-height: 50px">
                                 <option value="Frozen">Frozen</option>
                                 <option value="Chiller">Chiller</option>
                                 <option value="Dry">Dry</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
+                            <label>Quantity Of Product:</label>
+                            <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                <option selected>Quantity of product</option>
+                                <option value="0-100Kg">00-100Kg</option>
+                                <option value="100-250kg">100-250kg</option>
+                                <option value="250-700kg">250-700kg</option>
+                                <option value="700-1000kg">700-1000kg</option>
+                                <option value="1000-8000kg">1000-8000kg</option>
+                            </select>
+                        </div>
+                        <div class="col-xl-4 col-6 d-flex flex-column my-2">
+                            <label>Type Of Product:</label>
+                            <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                <option selected>Type of product</option>
+                                <option value="Frozen Food">Frozen Food</option>
+                                <option value="Dairy">Dairy</option>
+                                <option value="Raw Meat">Raw Meat</option>
+                                <option value="Pharma">Pharma</option>
+                                <option value="Fruits & veggies">Fruits & veggies</option>
+                                <option value="Ice Cream">Ice Cream</option>
+                                <option value="Frozen Peas">Frozen Peas</option>
+                                <option value="Others">Others</option>
                             </select>
                         </div>
 
@@ -152,9 +177,17 @@
             </div>
         </div>
         <hr />
-        <div></div>
 
-        <div id="vehicleResults" class="row justify-content-center mt-4"></div>
+        <div class="all-vehicles row">
+            <div id="vehicleResults" class="col-md-9 row justify-content-center mt-4"></div>
+            <!-- <div class="price-estimation col-md-3">
+                <div class="rounded border bg-secondaryblue">
+                    <h5 class="text-center">Price Estimation</h5>
+                    <div class="result"></div>    
+                    <button id="checkLocations">Location</button>
+                </div>
+            </div> -->
+        </div>
 
         <script src="js/main.js"></script>
 
@@ -220,18 +253,71 @@
             document.getElementById("drop-location").value = localStorage.getItem("dropLocation");
             document.getElementById("pickup-date").value = localStorage.getItem("pickupDate");
             document.getElementById("selected-vehicle").value = localStorage.getItem("selectedVehicle");
+            document.getElementById("quantity-product").value = localStorage.getItem("quantityProduct");
+            document.getElementById("type-product").value = localStorage.getItem("typeProduct");
 
             async function fetchAvailableTrucks() {
                 const pickupLocation = document.getElementById("pickup-location").value;
                 const dropLocation = document.getElementById("drop-location").value;
                 const pickupDate = document.getElementById("pickup-date").value;
                 const selectedVehicle = document.getElementById("selected-vehicle").value;
+                const quantityProduct = document.getElementById("quantity-product").value;
+                const typeProduct = document.getElementById("type-product").value;
 
-               
+                try {
+                    // Fetch data directly from the local vehicles.json file
+                    const response = await fetch("vehicles.json");
+                    const data = await response.json();
+
+                    console.log("Fetched vehicles:", data); // Check the structure to confirm
+
+                    const vehicleResults = document.getElementById("vehicleResults");
+                    vehicleResults.innerHTML = ""; // Clear previous results
+
+                    // Access the nested array, assuming it’s inside `data`
+                    const vehicles = data; // Adjust this based on the actual structure of vehicles.json
+
+                    if (!Array.isArray(vehicles)) {
+                        vehicleResults.innerHTML = "<p>Unexpected response format. No vehicles available.</p>";
+                        return;
+                    }
+
+                    // Display each vehicle
+                    vehicles.forEach((vehicle) => {
+                        const vehicleCard = document.createElement("div");
+                        vehicleCard.className = "col-md-9 my-2 p-0 border rounded";
+                        vehicleCard.innerHTML = `
+                <div class="bg-light d-flex justify-content-between">
+                    <h5 class="p-2">${vehicle.vehicleName} (${vehicle.id})</h5>
+                    <h5 class="p-2">Runs On: M T W T F S S</h5>
+                </div>
+                <div class="p-2">
+                    <div class="d-flex justify-content-between">    
+                    <p><strong>Locations Covered:</strong> ${vehicle.startFrom},${vehicle.dropLocations}</p>
+                    </div>
+                    <p><strong>Size:</strong> ${vehicle.capacity} Kg (${vehicle.size})</p>
+                    <p><strong>Temperature Range:</strong> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
+                </div>
+                <div class="m-2">
+                            <button type="button" class="btn-booknow">Book Now</button>
+                            <div class="result"></div> 
+                        </div>`;
+
+                        vehicleResults.appendChild(vehicleCard);
+                    });
+                } catch (error) {
+                    console.error("Error fetching vehicles:", error);
+                    vehicleResults.innerHTML = "<p>Unable to fetch vehicle data.</p>";
+                }
+
             }
 
             fetchAvailableTrucks();
         </script>
+
+        <!-- calculate price  -->
+
+        <script src="js/priceEstimation.js"></script>
 
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
