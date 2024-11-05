@@ -135,17 +135,18 @@
                     </div>
                     <div class="container">
                         <div class="service-content" id="logistics">
+                            <!-- https://docs.google.com/forms/d/e/1FAIpQLScI0DLpNsUX2LF37T8BZw4r7o-K43pOEh0ZAOANpXhELGlPww/viewform?usp=pp_url&entry.1226122781=pickup&entry.68159007=dop&entry.989363744=76543&entry.1373909822=quantity&entry.1874477400=type+product&entry.2143236161=vehicle -->
                             <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
                                 <div class="row mx-n2">
                                     <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
+                                        <input id="pickup-location" name="entry.1226122781" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                                        <input id="drop-location" name="entry.68159007" type="text" class="form-control p-4" placeholder="Enter drop location" required />
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
                                         <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                            <input id="pickup-date" name="entry.989363744" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
                                         </div>
                                     </div>
                                     <div class="col-xl-6 px-2">
@@ -165,11 +166,14 @@
                                                 <p class="text-dark mb-0">Dry</p>
                                                 <p class="text-dark mt-0">-14°c to -25°c</p>
                                             </div>
-                                            <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
+                                            <input type="hidden" id="selected-vehicle" name="entry.2143236161" value="" />
                                         </div>
                                     </div>
                                     <div class="col-xl-6 px-2">
+
+
                                         <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+
                                             <option selected>Quantity of product</option>
                                             <option value="0-100Kg">00-100Kg</option>
                                             <option value="100-250kg">100-250kg</option>
@@ -177,7 +181,9 @@
                                             <option value="700-1000kg">700-1000kg</option>
                                             <option value="1000-8000kg">1000-8000kg</option>
                                         </select>
+
                                         <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+
                                             <option selected>Type of product</option>
                                             <option value="Frozen Food">Frozen Food</option>
                                             <option value="Dairy">Dairy</option>
@@ -421,8 +427,8 @@
                     <div class="team-item">
                         <img class="img-fluid w-100" src="img/team-2.jpg" alt="" />
                         <div class="position-relative py-4">
-                            <h4 class="text-uppercase">Full Name</h4>
-                            <p class="m-0">Designation</p>
+                            <h4 class="text-uppercase">Tanishq Sharma</h4>
+                            <p class="m-0">Co- Founder</p>
                             <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -433,8 +439,8 @@
                     <div class="team-item">
                         <img class="img-fluid w-100" src="img/team-3.jpg" alt="" />
                         <div class="position-relative py-4">
-                            <h4 class="text-uppercase">Full Name</h4>
-                            <p class="m-0">Designation</p>
+                            <h4 class="text-uppercase">Tanishq Sharma</h4>
+                            <p class="m-0">Co- Founder</p>
                             <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
@@ -445,8 +451,8 @@
                     <div class="team-item">
                         <img class="img-fluid w-100" src="img/team-4.jpg" alt="" />
                         <div class="position-relative py-4">
-                            <h4 class="text-uppercase">Full Name</h4>
-                            <p class="m-0">Designation</p>
+                            <h4 class="text-uppercase">Tanishq Sharma</h4>
+                            <p class="m-0">Co- Founder</p>
                             <div class="team-social position-absolute w-100 h-100 d-flex align-items-center justify-content-center">
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-twitter"></i></a>
                                 <a class="btn btn-lg btn-primaryorange btn-lg-square mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
