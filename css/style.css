@@ -8,6 +8,25 @@
 
 
 
+.bg-Frozen{
+    background-color: #eaebec;
+}
+.bg-Chiller{
+    background-color: #97c5e7;
+}
+.bg-Dry{
+    background-color: #fce9cb;
+}
+/* .text-Frozen{
+    color: #eaebec;
+}
+.text-Chiller{
+color: #97c5e7;
+}
+.text-Dry{
+    color: #fce9cb;
+} */
+
 .price-estimation {
     height: fit-content;
     position: sticky;

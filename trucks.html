@@ -114,6 +114,7 @@
             </div>
         </div>
         <!-- Navbar End -->
+         <div style="background-color: #edf9ff">
         <div class="container">
             <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
             <div class="d-flex align-items-center justify-content-center my-4">
@@ -121,7 +122,7 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Pickup Location:</label>
-                            <input id="pickup-location" name="entry.1226122781 type="text" class="form-control p-3" placeholder="Enter pickup location" required />
+                            <input id="pickup-location" name="entry.1226122781" type="text" class="form-control p-3" placeholder="Enter pickup location" required />
                         </div>
 
                         <div class="col-xl-4 col-6 d-flex flex-column my-2">
@@ -136,7 +137,7 @@
 
                         <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Vehicle Type:</label>
-                            <select id="selected-vehicle" name="entry.2143236161" class="form-control p-2" style="min-height: 50px">
+                            <select id="selected-vehicle" name="entry.2143236161" class="form-control p-2" style="min-height: 40px">
                                 <option value="Frozen">Frozen</option>
                                 <option value="Chiller">Chiller</option>
                                 <option value="Dry">Dry</option>
@@ -144,7 +145,7 @@
                         </div>
                         <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Quantity Of Product:</label>
-                            <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                            <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 40px">
                                 <option selected>Quantity of product</option>
                                 <option value="0-100Kg">00-100Kg</option>
                                 <option value="100-250kg">100-250kg</option>
@@ -155,7 +156,7 @@
                         </div>
                         <div class="col-xl-4 col-6 d-flex flex-column my-2">
                             <label>Type Of Product:</label>
-                            <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                            <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 40px">
                                 <option selected>Type of product</option>
                                 <option value="Frozen Food">Frozen Food</option>
                                 <option value="Dairy">Dairy</option>
@@ -176,10 +177,10 @@
                 </form>
             </div>
         </div>
-        <hr />
+        </div>
 
-        <div class="all-vehicles row">
-            <div id="vehicleResults" class="col-md-9 row justify-content-center mt-4"></div>
+        <div class="all-vehicles">
+            <div id="vehicleResults" class="row justify-content-center mt-4"></div>
             <!-- <div class="price-estimation col-md-3">
                 <div class="rounded border bg-secondaryblue">
                     <h5 class="text-center">Price Estimation</h5>
@@ -188,6 +189,83 @@
                 </div>
             </div> -->
         </div>
+
+
+        <!-- Footer Start -->
+        <div class="container-fluid bg-secondaryblue py-5 px-sm-3 px-md-5" style="margin-top: 90px">
+            <div class="row pt-5">
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
+                    <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Sector 16A, SEO 59 lower ground floor</p>
+                    <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>0129 406 5262</p>
+                    <p><i class="fa fa-envelope text-white mr-3"></i>Taapmaanlive@gmail.com</p>
+                    <h6 class="text-uppercase text-white py-2">Follow Us</h6>
+                    <div class="d-flex justify-content-start">
+                        <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-lg btn-dark btn-lg-square" href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
+                    <div class="d-flex flex-column justify-content-start">
+                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
+                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
+                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
+                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
+                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
+                        <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
+                    </div>
+                </div>
+                <!-- <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
+                    <div class="row mx-n1">
+                        <div class="col-4 px-1 mb-2">
+                            <a href=""><img class="w-100" src="img/gallery-1.jpg" alt="" /></a>
+                        </div>
+                        <div class="col-4 px-1 mb-2">
+                            <a href=""><img class="w-100" src="img/gallery-2.jpg" alt="" /></a>
+                        </div>
+                        <div class="col-4 px-1 mb-2">
+                            <a href=""><img class="w-100" src="img/gallery-3.jpg" alt="" /></a>
+                        </div>
+                        <div class="col-4 px-1 mb-2">
+                            <a href=""><img class="w-100" src="img/gallery-4.jpg" alt="" /></a>
+                        </div>
+                        <div class="col-4 px-1 mb-2">
+                            <a href=""><img class="w-100" src="img/gallery-5.jpg" alt="" /></a>
+                        </div>
+                        <div class="col-4 px-1 mb-2">
+                            <a href=""><img class="w-100" src="img/gallery-6.jpg" alt="" /></a>
+                        </div>
+                    </div>
+                </div> -->
+                <!-- <div class="col-lg-3 col-md-6 mb-5">
+                    <h4 class="text-uppercase text-light mb-4">Newsletter</h4>
+                    <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
+                    <div class="w-100 mb-3">
+                        <div class="input-group">
+                            <input type="text" class="form-control bg-greyishblue border-dark" style="padding: 25px" placeholder="Your Email" />
+                            <div class="input-group-append">
+                                <button class="btn btn-primaryorange text-uppercase px-3">Sign Up</button>
+                            </div>
+                        </div>
+                    </div>
+                    <i>Lorem sit sed elitr sed kasd et</i>
+                </div> -->
+            </div>
+        </div>
+        <div class="container-fluid bg-greyishblue py-4 px-sm-3 px-md-5">
+            <p class="mb-2 text-center text-body">&copy; <a href="#">Taapmaan</a>. All Rights Reserved.</p>
+
+            <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+            <!-- <p class="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">ocupy</a></p> -->
+        </div>
+        <!-- Footer End -->
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primaryorange btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
         <script src="js/main.js"></script>
 
@@ -285,22 +363,22 @@
                     // Display each vehicle
                     vehicles.forEach((vehicle) => {
                         const vehicleCard = document.createElement("div");
-                        vehicleCard.className = "col-md-9 my-2 p-0 border rounded";
+                        vehicleCard.className = "col-md-7 my-2 p-0 border shadow rounded";
                         vehicleCard.innerHTML = `
-                <div class="bg-light d-flex justify-content-between">
+                <div class="bg-${vehicle.vehicleType} d-flex justify-content-between">
                     <h5 class="p-2">${vehicle.vehicleName} (${vehicle.id})</h5>
                     <h5 class="p-2">Runs On: M T W T F S S</h5>
                 </div>
                 <div class="p-2">
                     <div class="d-flex justify-content-between">    
-                    <p><strong>Locations Covered:</strong> ${vehicle.startFrom},${vehicle.dropLocations}</p>
+                    <p><i class="text-dark fa fa-location-arrow mr-2"></i> ${vehicle.startFrom},${vehicle.dropLocations}</p>
                     </div>
-                    <p><strong>Size:</strong> ${vehicle.capacity} Kg (${vehicle.size})</p>
-                    <p><strong>Temperature Range:</strong> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
+                    <p><i class="text-dark fa fa-archive mr-2"></i> ${vehicle.capacity} Kg (${vehicle.size})</p>
+                    <p><i class="text-dark fa fa-thermometer-half mr-2"></i> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
                 </div>
                 <div class="m-2">
                             <button type="button" class="btn-booknow">Book Now</button>
-                            <div class="result"></div> 
+                            <div class="result"></div>
                         </div>`;
 
                         vehicleResults.appendChild(vehicleCard);

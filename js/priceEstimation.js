@@ -16,6 +16,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 else if(quantity=="100-250kg"){
                     displayResults('Rs. 15 per Kg');
                 }
+                else if(quantity=="250-700kg"){
+                    displayResults('Rs. 6 per Kg');
+                }
+                else if(quantity=="700-1000kg"){
+                    displayResults('Rs. 5 per Kg');
+                }
+                else if(quantity=="1000-8000kg"){
+                    displayResults('Rs. 5 per Kg');
+                }
+                else{
+                    displayResults('Select quantity of product to view estimated price');
+                }
             } else {
                 calculateDistance(pickupLocation.geometry.location, dropLocation.geometry.location);
             }
@@ -63,7 +75,7 @@ function calculateDistance(pickupLocation, dropLocation) {
         if (status === 'OK') {
             const distance = response.rows[0].elements[0].distance.text;
             displayResults(`Distance: ${distance}`);
-        } else {
+        } else {z
             console.error('Error calculating distance:', status);
         }
     });
