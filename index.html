@@ -32,7 +32,7 @@
 
     <body>
         <!-- Topbar Start -->
-        <div class="container-fluid py-3 px-lg-5 d-none d-lg-block" style="background-color: #d1e9ef">
+        <div class="container-fluid py-2 px-lg-5 d-none d-lg-block bg-secondaryblue">
             <div class="row">
                 <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
                     <div class="d-inline-flex align-items-center">
@@ -66,7 +66,7 @@
 
         <!-- Navbar Start -->
         <div class="container-fluid position-relative nav-bar p-0">
-            <div class="position-relative px-lg-5" style="z-index: 9">
+            <div class="position-relative" style="z-index: 9">
                 <nav class="navbar navbar-expand-lg bg-white shadow navbar-dark py-3 py-lg-0 pl-3 pl-lg-5">
                     <a href="" class="navbar-brand">
                         <img src="img/logo.png" width="180px" />
@@ -89,30 +89,44 @@
         <!-- Navbar End -->
 
         <!-- Carousel Start -->
-        <div class="container-fluid p-0 position-relative" style="margin-bottom: 40px">
+        <div class="container-fluid p-0 position-relative">
             <!-- Form Overlay -->
 
             <!-- Carousel -->
             <div id="header-carousel" class="carousel slide" data-ride="carousel">
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <img class="w-100" src="img/IMG1.jpg" alt="Image" />
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-start">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="img/mobile_banner1.jpg">
+                            <img class="w-100" src="img/V4Q6BEFH_output_0.jpeg" alt="Image" />
+                        </picture>
+                        <div class="carousel-caption pl-5 d-flex flex-column align-items-start justify-content-center">
+                            <h1 class="text-light text-center">Reliable Cold Chain Logistics</h1>
+                            <p class="text-light text-center">We ensure your products stay at the ideal temperature throughout the journey</p>
+                            <button class="btn btn-secondaryblue rounded-pill py-2 px-4" type="submit">Explore Now >></button>
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img class="w-100" src="img/IMG2.jpg" alt="Image" />
-                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-start">
+                        <picture>
+                            <source media="(max-width: 991px)" srcset="img/mobile_banner2.jpg">
+                            <img class="w-100" src="img/SRHU6FGA_output_0.jpeg" alt="Image" />
+                        </picture>
+                        <div class="carousel-caption pl-5 d-flex flex-column align-items-start justify-content-center">
+                            <h1 class="text-light text-center">Optimized Cold Storage Solutions</h1>
+                            <p class="text-light text-center">Storage to distribution, with precise temperature management we meet your unique needs</p>
+                            <button class="btn btn-secondaryblue rounded-pill py-2 px-4" type="submit">Explore Now >></button>
                         </div>
                     </div>
+                    
                 </div>
             </div>
         </div>
         <!-- Carousel End -->
-        <div class="container-fluid form-overlay-container">
-            <div id="form_overlay_banner" class="form-overlay mx-3">
-                <div id="banner_form" class="bg-white shadow rounded-lg">
-                    <h2 class="my-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
+        <div class="container-fluid pb-5 pt-3"  style="background-color: #edf9ff">
+            <h2 class="text-center m-3 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
+            <div class="container">
+            <!-- <div id="form_overlay_banner" class="form-overlay mx-3"> -->
+                <div id="banner_form" class="bg-white shadow rounded-lg py-4">
                     <div class="d-flex justify-content-between">
                         <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
                             <div class="d-flex align-items-center justify-content-center mb-3">
@@ -309,7 +323,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+                </div>
+            <!-- </div> -->
         </div>
 
         <!-- About Start -->
@@ -365,40 +380,40 @@
                 <div class="row">
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/dairy.png" width="150px" alt="" />
+                            <img class="img-fluid mb-4" src="img/dairy.png" width="80px" alt="" />
                             <h4>Dairy & Refrigerated Products</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item active mb-4">
-                            <img class="img-fluid mb-4" src="img/fruitsndvegg.png" width="150px" alt="" />
+                            <img class="img-fluid mb-4" src="img/fruitsndvegg.png" width="80px" alt="" />
                             <h4>Fruits & Vegetables</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/frozenFood.png" width="150px" alt="" />
+                            <img class="img-fluid mb-4" src="img/frozenFood.png" width="80px" alt="" />
 
                             <h4>Processed & Frozen Foods</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/snacks.png" width="150px" alt="" />
+                            <img class="img-fluid mb-4" src="img/snacks.png" width="80px" alt="" />
 
                             <h4>Dry Goods & Snacks</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/chemicalprod.png" width="150px" alt="" />
+                            <img class="img-fluid mb-4" src="img/chemicalprod.png" width="80px" alt="" />
 
                             <h4>Industrial & Chemical</h4>
                         </div>
                     </div>
                     <div class="col-lg-4 col-md-6 mb-2">
                         <div class="rent-item mb-4">
-                            <img class="img-fluid mb-4" src="img/merchandise.png" width="150px" alt="" />
+                            <img class="img-fluid mb-4" src="img/merchandise.png" width="80px" alt="" />
                             <h4>FMCG & General Merchandise</h4>
                         </div>
                     </div>
@@ -629,9 +644,9 @@
             <div class="row pt-5">
                 <div class="col-lg-3 col-md-6 mb-5">
                     <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
-                    <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Sector 16A, SEO 59 lower ground floor</p>
-                    <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>0129 406 5262</p>
-                    <p><i class="fa fa-envelope text-white mr-3"></i>Taapmaanlive@gmail.com</p>
+                    <p class="mb-2 text-dark"><i class="fa fa-map-marker-alt text-dark mr-3"></i>Sector 16A, SEO 59 lower ground floor</p>
+                    <p class="mb-2 text-dark"><i class="fa fa-phone-alt text-dark mr-3"></i>0129 406 5262</p>
+                    <p class="text-dark"><i class="fa fa-envelope text-dark mr-3"></i>Taapmaanlive@gmail.com</p>
                     <h6 class="text-uppercase text-white py-2">Follow Us</h6>
                     <div class="d-flex justify-content-start">
                         <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -643,12 +658,12 @@
                 <div class="col-lg-3 col-md-6 mb-5">
                     <h4 class="text-uppercase text-light mb-4">Usefull Links</h4>
                     <div class="d-flex flex-column justify-content-start">
-                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
-                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
-                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
-                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
-                        <a class="text-body mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
-                        <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
+                        <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Private Policy</a>
+                        <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Term & Conditions</a>
+                        <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>New Member Registration</a>
+                        <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Affiliate Programme</a>
+                        <a class="text-dark mb-2" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Return & Refund</a>
+                        <a class="text-dark" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
                     </div>
                 </div>
                 <!-- <div class="col-lg-3 col-md-6 mb-5">
@@ -690,10 +705,10 @@
             </div>
         </div>
         <div class="container-fluid bg-greyishblue py-4 px-sm-3 px-md-5">
-            <p class="mb-2 text-center text-body">&copy; <a href="#">Taapmaan</a>. All Rights Reserved.</p>
+            <p class="mb-2 text-center text-dark">&copy; <a href="#">Taapmaan</a>. All Rights Reserved.</p>
 
             <!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
-            <!-- <p class="m-0 text-center text-body">Designed by <a href="https://htmlcodex.com">ocupy</a></p> -->
+            <!-- <p class="m-0 text-center text-dark">Designed by <a href="https://htmlcodex.com">ocupy</a></p> -->
         </div>
         <!-- Footer End -->
 
