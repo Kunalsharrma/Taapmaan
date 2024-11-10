@@ -117,77 +117,11 @@
         <div style="background-color: #edf9ff">
             <div class="container">
                 <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
-                <div class="d-flex align-items-center justify-content-center my-4">
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI0DLpNsUX2LF37T8BZw4r7o-K43pOEh0ZAOANpXhELGlPww/formResponse" method="post" target="hidden_iframe3" id="truckFilterForm">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Pickup Location:</label>
-                                <input id="pickup-location" name="entry.1226122781" type="text" class="form-control p-3" placeholder="Enter pickup location" required />
-                            </div>
 
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Drop Location:</label>
-                                <input id="drop-location" name="entry.68159007" type="text" class="form-control p-3" placeholder="Enter drop location" required />
-                            </div>
-
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Pickup Date:</label>
-                                <input id="pickup-date" name="entry.989363744" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
-                            </div>
-
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Vehicle Type:</label>
-                                <select id="selected-vehicle" name="entry.2143236161" class="form-control p-2" style="min-height: 40px">
-                                    <option value="Frozen">Frozen</option>
-                                    <option value="Chiller">Chiller</option>
-                                    <option value="Dry">Dry</option>
-                                </select>
-                            </div>
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Quantity Of Product:</label>
-                                <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 40px">
-                                    <option selected>Quantity of product</option>
-                                    <option value="0-100Kg">00-100Kg</option>
-                                    <option value="100-250kg">100-250kg</option>
-                                    <option value="250-700kg">250-700kg</option>
-                                    <option value="700-1000kg">700-1000kg</option>
-                                    <option value="1000-8000kg">1000-8000kg</option>
-                                </select>
-                            </div>
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Type Of Product:</label>
-                                <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 40px">
-                                    <option selected>Type of product</option>
-                                    <option value="Frozen Food">Frozen Food</option>
-                                    <option value="Dairy">Dairy</option>
-                                    <option value="Raw Meat">Raw Meat</option>
-                                    <option value="Pharma">Pharma</option>
-                                    <option value="Fruits & veggies">Fruits & veggies</option>
-                                    <option value="Ice Cream">Ice Cream</option>
-                                    <option value="Frozen Peas">Frozen Peas</option>
-                                    <option value="Others">Others</option>
-                                </select>
-                            </div>
-
-                            <div class="row justify-content-center align-items-center my-3">
-                                <button type="submit" onclick="fetchAvailableTrucks()">Search</button>
-                            </div>
-                            <p id="success-contact-submit"></p>
-                        </div>
-                    </form>
+                <div>
+                    
                 </div>
             </div>
-        </div>
-
-        <div class="all-vehicles">
-            <div id="vehicleResults" class="row justify-content-center mx-0 my-4"></div>
-            <!-- <div class="price-estimation col-md-3">
-                <div class="rounded border bg-secondaryblue">
-                    <h5 class="text-center">Price Estimation</h5>
-                    <div class="result"></div>    
-                    <button id="checkLocations">Location</button>
-                </div>
-            </div> -->
         </div>
 
         <!-- Footer Start -->
@@ -362,7 +296,7 @@
                     // Display each vehicle
                     vehicles.forEach((vehicle) => {
                         const vehicleCard = document.createElement("div");
-                        vehicleCard.className = "col-xl-7 col-12 my-2 p-0 border shadow rounded";
+                        vehicleCard.className = "col-md-7 my-2 p-0 border shadow rounded";
                         vehicleCard.innerHTML = `
                 <div class="bg-${vehicle.vehicleType} d-flex justify-content-between">
                     <h5 class="p-2">${vehicle.vehicleName} (${vehicle.id})</h5>
