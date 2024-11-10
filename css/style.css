@@ -17,15 +17,6 @@
 .bg-Dry{
     background-color: #fce9cb;
 }
-/* .text-Frozen{
-    color: #eaebec;
-}
-.text-Chiller{
-color: #97c5e7;
-}
-.text-Dry{
-    color: #fce9cb;
-} */
 
 .price-estimation {
     height: fit-content;
@@ -125,6 +116,9 @@ button:hover {
 .btn-secondaryblue {
     background-color: var(--secondary);
     color: white;
+}
+.btn-secondaryblue:hover {
+    background-color: #5197c9;
 }
 
 h1,
@@ -278,23 +272,12 @@ h6,
 
 .service-item:hover,
 .service-item.active {
-    /* border-bottom: var(--secondary); */
     border-bottom: 5px solid var(--secondary);
 }
 
 .service-item h1,
 .service-item h4 {
     transition: 0.5s;
-}
-
-.service-item:hover h1,
-.service-item.active h1 {
-    /* color: var(--dark) !important; */
-}
-
-.service-item:hover h4,
-.service-item.active h4 {
-    /* color: var(--light); */
 }
 
 .rent-item {
