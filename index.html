@@ -722,14 +722,20 @@
                 var pickupInput = document.getElementById("pickup-location");
                 var dropInput = document.getElementById("drop-location");
                 var storageInput = document.getElementById("storage-location");
+                var pickupInputIntegrated = document.getElementById("pickup-location-integrated");
+                var dropInputIntegrated = document.getElementById("drop-location-integrated");
 
                 var pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
                 var dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
                 var storageAutocomplete = new google.maps.places.Autocomplete(storageInput);
+                var pickupInteAutocomplete = new google.maps.places.Autocomplete(pickupInputIntegrated);
+                var dropInteAutocomplete = new google.maps.places.Autocomplete(dropInputIntegrated);
 
                 pickupAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
                 dropAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
                 storageAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
+                pickupInteAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
+                dropInteAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
 
                 // Add listeners to handle the selected place
                 pickupAutocomplete.addListener("place_changed", function () {
@@ -741,10 +747,20 @@
                     var place = dropAutocomplete.getPlace();
                     console.log("Drop location:", place);
                 });
-
+                
                 storageAutocomplete.addListener("place_changed", function () {
                     var place = storageAutocomplete.getPlace();
                     console.log("Storage location:", place);
+                });
+
+                pickupInteAutocomplete.addListener("place_changed", function () {
+                    var place = pickupInteAutocomplete.getPlace();
+                    console.log("Pickup location:", place);
+                });
+
+                dropInteAutocomplete.addListener("place_changed", function () {
+                    var place = dropInteAutocomplete.getPlace();
+                    console.log("Drop location:", place);
                 });
             }
 
