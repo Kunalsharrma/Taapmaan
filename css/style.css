@@ -6,16 +6,33 @@
     --dark: #1c1e32;
 }
 
+html {
+    scroll-behavior: smooth;
+  }
+  
+
+.vehicle_box{
+    width: 60vw;
+}
+
+.vehicle_route {
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    white-space: normal;
+}
+
+
+
 
 
 .bg-Frozen{
     background-color: #eaebec;
 }
 .bg-Chiller{
-    background-color: #97c5e7;
+    background-color: #97c5e7 !important;
 }
 .bg-Dry{
-    background-color: #fce9cb;
+    background-color: #fce9cb !important;
 }
 
 .price-estimation {
@@ -76,12 +93,12 @@ button:hover {
 }
 
 .milestone_counter{
-    font-size: 45px;
+    font-size: 35px;
     color: var(--primary);
     font-weight: 600;
 }
 .milestone_text{
-    font-size: 18px;
+    font-size: 14px;
     
 }
 
@@ -237,12 +254,27 @@ h6,
     .vehicle-box {
         height: 90px !important;
     }
+    .vehicle_box{
+        width: 95vw;
+    }
+    h5{
+        font-size: 14px;
+    }
+    .vehicle_info p{
+        font-size: 10px;
+    }
+    .btn-booknow, .estimated_price{
+        font-size: 12px;
+    }
 }
 
 @media (max-width: 400px) {
-    .service-box h6{
+    /* .service-box h6{
         display: none;
-    }
+    } */
+     .about_stats_card h4{
+        font-size: 18px;
+     }
     
 }
 
@@ -501,6 +533,9 @@ body {
     }
     .form-overlay-container{
         height: 500px;
+    }
+    .vehicle_box{
+        width: 80vw;
     }
 }
 @media only screen and (max-width: 800px) {

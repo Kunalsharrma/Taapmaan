@@ -31,6 +31,32 @@
     </head>
 
     <body>
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+        <iframe
+            name="hidden_iframe3"
+            id="hidden_iframe3"
+            style="display: none"
+            onload="if(submitted){
+            const success = document.getElementById('success-contact-submit')
+            success.innerHTML = 'We have recieved your details, We will contact you soon regarding it. Thankyou!'
+            
+    }"
+        ></iframe>
+        <script type="text/javascript">
+            var submitted = false;
+        </script>
+        <iframe
+            name="hidden_iframe4"
+            id="hidden_iframe4"
+            style="display: none"
+            onload="if(submitted){
+            const success = document.getElementById('success-contact-submit-integrated')
+            success.innerHTML = 'We have recieved your details, We will contact you soon regarding it. Thankyou!'
+            
+    }"
+        ></iframe>
         <!-- Topbar Start -->
         <div class="container-fluid py-2 px-lg-5 d-none d-lg-block bg-secondaryblue">
             <div class="row">
@@ -97,85 +123,85 @@
                 <div class="carousel-inner">
                     <div class="carousel-item active">
                         <picture>
-                            <source media="(max-width: 991px)" srcset="img/mobile_banner1.jpg">
+                            <source media="(max-width: 991px)" srcset="img/mobile_banner1.jpg" />
                             <img class="w-100" src="img/V4Q6BEFH_output_0.jpeg" alt="Image" />
                         </picture>
                         <div class="carousel-caption pl-5 d-flex flex-column align-items-start justify-content-center">
-                            <h1 class="text-light text-center">Reliable Cold Chain Logistics</h1>
-                            <p class="text-light text-center">We ensure your products stay at the ideal temperature throughout the journey</p>
-                            <button class="btn btn-secondaryblue rounded-pill py-2 px-4" type="submit">Explore Now >></button>
+                            <h1 class="text-light">Reliable Cold Chain Logistics</h1>
+                            <p class="text-light text-left">We ensure your products stay at the ideal temperature throughout the journey</p>
+                            <a href="#main_form" class="btn btn-secondaryblue rounded-pill py-1 px-3 py-md-2 px-md-4" type="submit">Explore Now >></a>
                         </div>
                     </div>
                     <div class="carousel-item">
                         <picture>
-                            <source media="(max-width: 991px)" srcset="img/mobile_banner2.jpg">
+                            <source media="(max-width: 991px)" srcset="img/mobile_banner2.jpg" />
                             <img class="w-100" src="img/SRHU6FGA_output_0.jpeg" alt="Image" />
                         </picture>
                         <div class="carousel-caption pl-5 d-flex flex-column align-items-start justify-content-center">
-                            <h1 class="text-light text-center">Optimized Cold Storage Solutions</h1>
-                            <p class="text-light text-center">Storage to distribution, with precise temperature management we meet your unique needs</p>
-                            <button class="btn btn-secondaryblue rounded-pill py-2 px-4" type="submit">Explore Now >></button>
+                            <h1 class="text-light">Optimized Cold Storage Solutions</h1>
+                            <p class="text-light text-left">From storage to distribution, we ensure precise temperature management for your products.</p>
+                            <a href="#main_form" class="btn btn-secondaryblue rounded-pill py-1 px-3 py-md-2 px-md-4" type="submit">Explore Now >></a>
                         </div>
                     </div>
-                    
                 </div>
             </div>
         </div>
         <!-- Carousel End -->
-        <div class="container-fluid pb-5 pt-3"  style="background-color: #edf9ff">
+        <div class="container-fluid pb-5 pt-3" id="main_form" style="background-color: #edf9ff">
             <h2 class="text-center m-3 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
             <div class="container">
-            <!-- <div id="form_overlay_banner" class="form-overlay mx-3"> -->
-                <div id="banner_form" class="bg-white shadow rounded-lg py-4">
+                <!-- <div id="form_overlay_banner" class="form-overlay mx-3"> -->
+                <div id="banner_form" class="bg-white shadow rounded-lg py-3">
                     <div class="d-flex justify-content-between">
                         <div class="service-box service-item active d-flex flex-column justify-content-center p-2" id="box-logistics" onclick="showContent('logistics', 'box-logistics')">
                             <div class="d-flex align-items-center justify-content-center mb-3">
                                 <i class="fa fa-lg fa-taxi text-secondary"></i>
                             </div>
-                            <h6 class="text-uppercase mb-3">Logistics</h6>
+                            <h6 class="text-uppercase mb-3 d-none d-sm-block">Logistics</h6>
                         </div>
                         <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-cold-storage" onclick="showContent('cold-storage', 'box-cold-storage')">
                             <div class="d-flex align-items-center justify-content-center mb-3">
                                 <i class="fa fa-lg fa-warehouse text-secondary"></i>
                             </div>
-                            <h6 class="text-uppercase mb-3">Cold Storage</h6>
+                            <h6 class="text-uppercase mb-3 d-none d-sm-block">Cold Storage</h6>
                         </div>
                         <div class="service-box service-item d-flex flex-column justify-content-center p-2" id="box-integrated" onclick="showContent('integrated', 'box-integrated')">
                             <div class="d-flex align-items-center justify-content-center mb-3">
                                 <i class="fa fa-lg fa-infinity text-secondary"></i>
                             </div>
-                            <h6 class="text-uppercase mb-3">Integrated</h6>
+                            <h6 class="text-uppercase mb-3 d-none d-sm-block">Integrated</h6>
                         </div>
                     </div>
                     <div class="container">
                         <div class="service-content" id="logistics">
+                            <h6 class="text-uppercase text-center d-sm-none" style="font-size: 18px">Logistics</h6>
                             <!-- https://docs.google.com/forms/d/e/1FAIpQLScI0DLpNsUX2LF37T8BZw4r7o-K43pOEh0ZAOANpXhELGlPww/viewform?usp=pp_url&entry.1226122781=pickup&entry.68159007=dop&entry.989363744=76543&entry.1373909822=quantity&entry.1874477400=type+product&entry.2143236161=vehicle -->
                             <form class="bg-white rounded" id="truckBookingForm" style="max-width: 80vw">
                                 <div class="row mx-n2">
-                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-1 my-1 px-sm-2 my-sm-2">
                                         <input id="pickup-location" name="entry.1226122781" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-1 my-1 px-sm-2 my-sm-2">
                                         <input id="drop-location" name="entry.68159007" type="text" class="form-control p-4" placeholder="Enter drop location" required />
                                     </div>
-                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input id="pickup-date" name="entry.989363744" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                    <div class="col-xl-4 col-lg-4 col-sm-6 px-1 my-1 px-sm-2 my-sm-2">
+                                        <div class="date" id="logistics-date" data-target-input="nearest">
+                                            <input id="pickup-date" name="entry.989363744" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#logistics-date" data-toggle="datetimepicker" />
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 px-2">
+                                    <div class="col-xl-6 px-1 px-sm-2">
                                         <div class="vehicle-selection d-flex align-items-center justify-content-center">
-                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
+                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1 p-sm-2 m-sm-2" data-value="Frozen">
                                                 <img src="img/Frozen.png" width="40px" />
                                                 <p class="text-dark font-weight-bold mb-0">Frozen</p>
                                                 <p class="text-dark mt-0">0°C to -25°C</p>
                                             </div>
-                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Chiller">
+                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1 p-sm-2 m-sm-2" data-value="Chiller">
                                                 <img src="img/Chiller.png" width="35px" />
                                                 <p class="text-dark font-weight-bold mb-0">Chiller</p>
                                                 <p class="text-dark mt-0">0°C to 25°C</p>
                                             </div>
-                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Dry">
+                                            <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1 p-sm-2 m-sm-2" data-value="Dry">
                                                 <img src="img/Dry.png" width="40px" />
                                                 <p class="text-dark font-weight-bold mb-0">Dry</p>
                                                 <p class="text-dark mt-0">25°C and above</p>
@@ -183,11 +209,8 @@
                                             <input type="hidden" id="selected-vehicle" name="entry.2143236161" value="" />
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 px-2">
-
-
-                                        <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-
+                                    <div class="col-xl-6 px-1 px-sm-2">
+                                        <select id="quantity-product" class="custom-select px-3 my-1 px-sm-4 my-sm-2" name="entry.541085222" style="height: 50px">
                                             <option selected>Quantity of product</option>
                                             <option value="0-100Kg">00-100Kg</option>
                                             <option value="100-250kg">100-250kg</option>
@@ -196,8 +219,7 @@
                                             <option value="1000-8000kg">1000-8000kg</option>
                                         </select>
 
-                                        <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-
+                                        <select id="type-product" class="custom-select px-3 my-1 px-sm-4 my-sm-2" name="entry.863500876" style="height: 50px">
                                             <option selected>Type of product</option>
                                             <option value="Frozen Food">Frozen Food</option>
                                             <option value="Dairy">Dairy</option>
@@ -209,37 +231,38 @@
                                             <option value="Others">Others</option>
                                         </select>
                                     </div>
-                                    <div class="col-xl-12 px-2">
-                                        <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
+                                    <div class="col-xl-12 px-1">
+                                        <button id="nextButton" class="btn btn-primaryorange btn-block mt-3 my-sm-3" type="submit" style="height: 50px">Next >></button>
                                     </div>
-                                    <p id="success-contact-submit"></p>
+                                    <!-- <p id="success-contact-submit"></p> -->
                                 </div>
                             </form>
                         </div>
 
                         <div class="service-content" id="cold-storage" style="display: none">
-                            <form class="bg-white rounded" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSdnqkJe0o74HOL1-99uCEOGx_8KXQD4rPt_yZJXA2Sf2-6P-A/formResponse" target="hidden_iframe3" method="post" style="max-width: 80vw">
+                            <h6 class="text-uppercase text-center d-sm-none" style="font-size: 18px">Cold Storage</h6>
+                            <form class="bg-white rounded" style="max-width: 80vw">
                                 <div class="row mx-n2">
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
-                                        <input id="storage-location" name="" type="text" class="form-control p-4" placeholder="Storage location" required />
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-1 my-1 px-sm-2 my-sm-2">
+                                        <input id="storage-location" type="text" class="form-control p-4" placeholder="Storage location" required />
                                     </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 my-2">
-                                        <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input type="text" name="" class="form-control p-4 datetimepicker-input" placeholder="Date" data-target="#date" data-toggle="datetimepicker" />
+                                    <div class="col-xl-6 col-lg-4 col-sm-6 px-1 my-1 px-sm-2 my-sm-2">
+                                        <div class="date" id="coldstorage-date" data-target-input="nearest">
+                                            <input id="pickup-date-coldStorage" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#coldstorage-date" data-toggle="datetimepicker" required />
                                         </div>
                                     </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
-                                            <option selected>Quantity of product</option>
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-1 my-1 px-sm-2 my-sm-2">
+                                        <select id="product-quantity" class="custom-select" style="height: 50px" required>
+                                            <option selected disabled>Quantity of product</option>
                                             <option value="Less than 2Kg">Less than 2Kg</option>
                                             <option value="2-10kg">2-10kg</option>
                                             <option value="10-50kg">10-50kg</option>
                                             <option value="More than 50kg">More than 50kg</option>
                                         </select>
                                     </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2 py-3">
-                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
-                                            <option selected>Type of product</option>
+                                    <div class="col-xl-6 col-lg-4 col-md-6 px-1 my-1 px-sm-2 my-sm-2">
+                                        <select id="product-type" class="custom-select" style="height: 50px" required>
+                                            <option selected disabled>Type of product</option>
                                             <option value="Frozen Food">Frozen Food</option>
                                             <option value="Dairy">Dairy</option>
                                             <option value="Raw Meat">Raw Meat</option>
@@ -250,50 +273,65 @@
                                             <option value="Others">Others</option>
                                         </select>
                                     </div>
-                                    <div class="col-xl-6 col-lg-4 col-md-6 px-2">
-                                        <button class="btn btn-primaryorange btn-block mb-3" type="submit" style="height: 50px">Next >></button>
+                                    <div class="col-xl-12 col-lg-4 col-md-6 px-2">
+                                        <button class="btn btn-primaryorange btn-block mt-3" type="button" data-target="#coldStorageModal" style="height: 50px" onclick="populateColdStorageModal()">Next >></button>
                                     </div>
-                                    <p id="success-contact-submit"></p>
+                                    <p id="coldStorage-userinput" class="mt-2"></p>
                                 </div>
                             </form>
+                            <!-- Cold Storage Modal -->
+                            <div class="modal fade" id="coldStorageModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Confirm Your Details</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- https://docs.google.com/forms/d/e/1FAIpQLSclIrzckx_3xttePxRc8DIgNvyzREV6upWHZNbhsfkBYNsKwQ/viewform?usp=pp_url&entry.1543478821=Name&entry.1970966868=Phone&entry.382455909=Storage+locatin&entry.57042006=Date&entry.1133358281=Quantity&entry.579594669=Type -->
+                                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSclIrzckx_3xttePxRc8DIgNvyzREV6upWHZNbhsfkBYNsKwQ/formResponse" target="hidden_iframe3" onsubmit="return coldStorageModalSubmit()" method="post">
+                                                <input type="text" id="coldStore-name" name="entry.1543478821" class="form-control m-2" placeholder="Your Name" />
+                                                <input type="text" id="coldStore-phone" name="entry.1970966868" class="form-control m-2" placeholder="Your Phone No." />
+
+                                                <div class="row justify-content-center m-2">
+                                                    <input id="modal-storage-location" type="text" name="entry.382455909" class="col-md-5 m-2 rounded-pill form-control" placeholder="Storage Location" readonly />
+                                                    <input id="modal-pickup-date" type="text" name="entry.57042006" class="col-md-5 m-2 rounded-pill form-control" placeholder="Pickup Date" readonly />
+                                                    <input id="modal-product-quantity" type="text" name="entry.1133358281" class="col-md-5 m-2 rounded-pill form-control" placeholder="Quantity of Product" readonly />
+                                                    <input id="modal-product-type" type="text" name="entry.579594669" class="col-md-5 m-2 rounded-pill form-control" placeholder="Type of Product" readonly />
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <p id="success-contact-submit" class="text-center"></p>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- <div class="modal-info p-3">
+                                            <p>You will recieve a callback from us after submitting the form for further process.</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="service-content" id="integrated" style="max-width: 80vw">
+                            <h6 class="text-uppercase text-center d-sm-none" style="font-size: 18px">Integrated</h6>
                             <form class="bg-white rounded" id="integratedForm" style="max-width: 80vw">
                                 <div class="row mx-n2">
                                     <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <input id="pickup-location" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
+                                        <input id="pickup-location-integrated" type="text" class="form-control p-4" placeholder="Enter pickup location" required />
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <input id="drop-location" type="text" class="form-control p-4" placeholder="Enter drop location" required />
+                                        <input id="drop-location-integrated" type="text" class="form-control p-4" placeholder="Enter drop location" required />
                                     </div>
                                     <div class="col-xl-4 col-lg-4 col-sm-6 px-2 my-2">
-                                        <div class="date mb-3" id="date" data-target-input="nearest">
-                                            <input id="pickup-date" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                        <div class="date mb-3" id="integrated-date" data-target-input="nearest">
+                                            <input id="pickup-date-integrated" type="text" class="form-control p-4 datetimepicker-input" placeholder="Pickup Date" data-target="#integrated-date" data-toggle="datetimepicker" />
                                         </div>
                                     </div>
-                                    <!-- <div class="col-xl-6 px-2">
-                                    <div class="vehicle-selection d-flex align-items-center justify-content-center">
-                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Frozen">
-                                            <img src="img/Frozen.png" width="40px" />
-                                            <p class="text-dark mb-0">Frozen</p>
-                                            <p class="text-dark mt-0">-14°c to -25°c</p>
-                                        </div>
-                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Chiller">
-                                            <img src="img/Chiller.png" width="35px" />
-                                            <p class="text-dark mb-0">Chiller</p>
-                                            <p class="text-dark mt-0">+5°c to -20°c</p>
-                                        </div>
-                                        <div class="vehicle-box border d-flex flex-column align-items-center justify-content-center p-1 m-1" data-value="Dry">
-                                            <img src="img/Dry.png" width="40px" />
-                                            <p class="text-dark mb-0">Dry</p>
-                                            <p class="text-dark mt-0">-14°c to -25°c</p>
-                                        </div>
-                                        <input type="hidden" id="selected-vehicle" name="vehicle" value="" />
-                                    </div>
-                                </div> -->
                                     <div class="col-xl-6 px-2">
-                                        <select class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
+                                        <select id="product-quantity-integrated" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 50px">
                                             <option selected>Quantity of product</option>
                                             <option value="Less than 2Kg">Less than 2Kg</option>
                                             <option value="2-10kg">2-10kg</option>
@@ -302,7 +340,7 @@
                                         </select>
                                     </div>
                                     <div class="col-xl-6 px-2">
-                                        <select class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
+                                        <select id="product-type-integrated" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 50px">
                                             <option selected>Type of product</option>
                                             <option value="Frozen Food">Frozen Food</option>
                                             <option value="Dairy">Dairy</option>
@@ -315,15 +353,50 @@
                                         </select>
                                     </div>
                                     <div class="col-xl-12 px-2">
-                                        <button id="nextButton" class="btn btn-primaryorange btn-block my-3" type="submit" style="height: 50px">Next >></button>
+                                        <button id="nextButton2" class="btn btn-primaryorange btn-block my-3" type="button" data-target="#integratedModal" style="height: 50px" onclick="populateintegratedModal()">Next >></button>
                                     </div>
-                                    <p id="success-contact-submit"></p>
+                                    <p id="integrated-userinput" class="mt-2"></p>
                                 </div>
                             </form>
+                            <!-- Integrated Modal -->
+                            <div class="modal fade" id="integratedModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                <div class="modal-dialog">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLabel">Confirm Your Details</h5>
+                                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <!-- https://docs.google.com/forms/d/e/1FAIpQLSe3Y1NP98qSDY_w_mbxZK4Vl1fHV6WQwx3Q2WDAglUJizUb7Q/viewform?usp=pp_url&entry.452425811=Name&entry.1871536376=Phone&entry.23741819=Pickup&entry.257999828=Drop&entry.477780675=Date&entry.292357096=Quantity&entry.1153550707=Type -->
+                                            <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSe3Y1NP98qSDY_w_mbxZK4Vl1fHV6WQwx3Q2WDAglUJizUb7Q/formResponse" target="hidden_iframe4" onsubmit="return integratedModalSubmit()" method="post">
+                                                <input type="text" id="integrated-name" name="entry.452425811" class="form-control m-2" placeholder="Your Name" />
+                                                <input type="text" id="integrated-phone" name="entry.1871536376" class="form-control m-2" placeholder="Your Phone No." />
+
+                                                <div class="row justify-content-center m-2">
+                                                    <input id="modal-pickup-location-integrated" type="text" name="entry.23741819" class="col-md-5 m-2 rounded-pill form-control" placeholder="Pickup Location" readonly />
+                                                    <input id="modal-drop-location-integrated" type="text" name="entry.257999828" class="col-md-5 m-2 rounded-pill form-control" placeholder="Drop Location" readonly />
+                                                    <input id="modal-pickup-date-integrated" type="text" name="entry.477780675" class="col-md-5 m-2 rounded-pill form-control" placeholder="Pickup Date" readonly />
+                                                    <input id="modal-product-quantity-integrated" type="text" name="entry.292357096" class="col-md-5 m-2 rounded-pill form-control" placeholder="Quantity of Product" readonly />
+                                                    <input id="modal-product-type-integrated" type="text" name="entry.1153550707" class="col-md-5 m-2 rounded-pill form-control" placeholder="Type of Product" readonly />
+                                                </div>
+                                                <div class="modal-footer">
+                                                    <p id="success-contact-submit-integrated" class="text-center"></p>
+                                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <!-- <div class="modal-info p-3">
+                                            <p>You will recieve a callback from us after submitting the form for further process.</p>
+                                        </div> -->
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-                </div>
+            </div>
             <!-- </div> -->
         </div>
 
@@ -344,7 +417,7 @@
                 </div>
                 <div class="row mt-3">
                     <div class="col-lg-4 mb-2">
-                        <div class="bg- d-flex align-items-center p-4 mb-4" style="height: 150px">
+                        <div class="about_stats_card d-flex align-items-center p-4" style="height: 150px">
                             <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondaryblue ml-n4 mr-4" style="width: 100px; height: 100px">
                                 <i class="fa fa-2x fa-warehouse text-secondary"></i>
                             </div>
@@ -352,7 +425,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 mb-2">
-                        <div class="bg- d-flex align-items-center p-4 mb-4" style="height: 150px">
+                        <div class="about_stats_card d-flex align-items-center p-4" style="height: 150px">
                             <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondaryblue ml-n4 mr-4" style="width: 100px; height: 100px">
                                 <i class="fa fa-2x fa-truck-moving text-secondary"></i>
                             </div>
@@ -360,7 +433,7 @@
                         </div>
                     </div>
                     <div class="col-lg-4 mb-2">
-                        <div class="bg- d-flex align-items-center p-4 mb-4" style="height: 150px">
+                        <div class="about_stats_card d-flex align-items-center p-4" style="height: 150px">
                             <div class="d-flex align-items-center justify-content-center flex-shrink-0 bg-secondaryblue ml-n4 mr-4" style="width: 100px; height: 100px">
                                 <i class="fa fa-2x fa-map-marker-alt text-secondary"></i>
                             </div>
@@ -484,69 +557,46 @@
         <div class="container-fluid py-5" style="background-color: #edf9ff">
             <div class="container py-5">
                 <h1 class="display-4 text-uppercase text-center mb-5">Our <span class="text-primaryorange">Track Record</span> in Numbers</h1>
-                <!-- <div class="owl-carousel testimonial-carousel">
-                    <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <img class="img-fluid ml-n4" src="img/testimonial-1.jpg" alt="" />
-                            <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                        </div>
-                        <h4 class="text-uppercase mb-2">Client Name</h4>
-                        <i class="mb-2">Profession</i>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
-                    </div>
-                    <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <img class="img-fluid ml-n4" src="img/testimonial-2.jpg" alt="" />
-                            <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                        </div>
-                        <h4 class="text-uppercase mb-2">Client Name</h4>
-                        <i class="mb-2">Profession</i>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
-                    </div>
-                    <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <img class="img-fluid ml-n4" src="img/testimonial-3.jpg" alt="" />
-                            <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                        </div>
-                        <h4 class="text-uppercase mb-2">Client Name</h4>
-                        <i class="mb-2">Profession</i>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
-                    </div>
-                    <div class="testimonial-item d-flex flex-column justify-content-center px-4">
-                        <div class="d-flex align-items-center justify-content-between mb-3">
-                            <img class="img-fluid ml-n4" src="img/testimonial-4.jpg" alt="" />
-                            <h1 class="display-2 text-white m-0 fa fa-quote-right"></h1>
-                        </div>
-                        <h4 class="text-uppercase mb-2">Client Name</h4>
-                        <i class="mb-2">Profession</i>
-                        <p class="m-0">Kasd dolor no lorem nonumy sit labore tempor at justo rebum rebum stet, justo elitr dolor amet sit sea sed</p>
-                    </div>
-                </div> -->
-            
+
                 <div class="milestones my-5">
-                    <div class="row milestones_row">
+                    <div class="d-flex flex-wrap justify-content-between align-items-center milestones_row">
                         <!-- Milestone -->
-                        <div class="col-md-4 milestone_col">
+                        <div class="milestone_col m-2">
                             <div class="milestone">
-                                <div class="milestone_counter" data-end-value="500" data-sign-after="+">0</div>
-                                <div class="milestone_text text-dark">Trusted Clients Nationwide</div>
-                            </div>
-                        </div>
-
-
-                        <!-- Milestone -->
-                        <div class="col-md-4 milestone_col">
-                            <div class="milestone">
-                                <div class="milestone_counter" data-end-value="70" data-sign-after="+">0</div>
-                                <div class="milestone_text text-dark">Managed Product Categories</div>
+                                <div class="milestone_counter" data-end-value="200" data-sign-after="+">0</div>
+                                <div class="milestone_text text-dark font-weight-bold">Trusted Clients Nationwide</div>
                             </div>
                         </div>
 
                         <!-- Milestone -->
-                        <div class="col-md-4 milestone_col">
+                        <div class="milestone_col m-2">
                             <div class="milestone">
-                                <div class="milestone_counter" data-end-value="98" data-sign-after="%">0</div>
-                                <div class="milestone_text text-dark">On-Time Delivery Rate</div>
+                                <div class="milestone_counter" data-end-value="20" data-sign-after="+">0</div>
+                                <div class="milestone_text text-dark font-weight-bold">E-commerce brands onboarded</div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone_col m-2">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="20" data-sign-after="+">0</div>
+                                <div class="milestone_text text-dark font-weight-bold">Managed Product Categories</div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone_col m-2">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="100" data-sign-after="%">0</div>
+                                <div class="milestone_text text-dark font-weight-bold">On-Time Delivery Rate</div>
+                            </div>
+                        </div>
+
+                        <!-- Milestone -->
+                        <div class="milestone_col m-2">
+                            <div class="milestone">
+                                <div class="milestone_counter" data-end-value="33000" data-sign-after="+">0</div>
+                                <div class="milestone_text text-dark font-weight-bold">Executed deliveries last year</div>
                             </div>
                         </div>
                     </div>
@@ -561,7 +611,7 @@
                 <h1 class="display-4 text-uppercase text-center mb-5">Contact Us</h1>
                 <div class="row">
                     <div class="col-lg-7 mb-2">
-                        <div class="contact-form bg-secondaryblue mb-4" style="padding: 30px">
+                        <div class="contact-form bg-secondaryblue shadow rounded-lg mb-4 p-4 p-sm-5">
                             <form>
                                 <div class="row">
                                     <div class="col-6 form-group">
@@ -578,13 +628,13 @@
                                     <textarea class="form-control py-3 px-4" rows="5" placeholder="Message" required="required"></textarea>
                                 </div>
                                 <div>
-                                    <button class="btn btn-primaryorange py-3 px-5" type="submit">Send Message</button>
+                                    <button class="btn btn-primaryorange rounded-pill py-3 px-4 shadow" type="submit">Send Message</button>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="col-lg-5 mb-2">
-                        <div class="d-flex flex-column justify-content-center px-5 mb-4" style="height: 435px">
+                        <div class="d-flex flex-column justify-content-center px-sm-5 px-2 mb-sm-4 mb-2" style="height: 300px">
                             <div class="d-flex mb-3">
                                 <i class="fa fa-2x fa-map-marker-alt text-primaryorange flex-shrink-0 mr-3"></i>
                                 <div class="mt-n1">
@@ -605,39 +655,6 @@
             </div>
         </div>
         <!-- Contact End -->
-
-        <!-- Vendor Start -->
-        <!-- <div class="container-fluid py-5">
-            <div class="container py-5">
-                <div class="owl-carousel vendor-carousel">
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-1.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-2.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-3.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-4.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-5.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-6.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-7.png" alt="" />
-                    </div>
-                    <div class="bg-light p-4">
-                        <img src="img/vendor-8.png" alt="" />
-                    </div>
-                </div>
-            </div>
-        </div> -->
-        <!-- Vendor End -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-secondaryblue py-5 px-sm-3 px-md-5" style="margin-top: 90px">
@@ -666,42 +683,6 @@
                         <a class="text-dark" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
-                    <div class="row mx-n1">
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-1.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-2.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-3.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-4.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-5.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-6.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="col-lg-3 col-md-6 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Newsletter</h4>
-                    <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                    <div class="w-100 mb-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-greyishblue border-dark" style="padding: 25px" placeholder="Your Email" />
-                            <div class="input-group-append">
-                                <button class="btn btn-primaryorange text-uppercase px-3">Sign Up</button>
-                            </div>
-                        </div>
-                    </div>
-                    <i>Lorem sit sed elitr sed kasd et</i>
-                </div> -->
             </div>
         </div>
         <div class="container-fluid bg-greyishblue py-4 px-sm-3 px-md-5">
@@ -793,6 +774,78 @@
                 window.location.href = "trucks.html";
             });
         </script>
+        <script>
+            function populateColdStorageModal() {
+                // Get the values from the form
+                const storageLocation = document.getElementById("storage-location").value;
+                const pickupDate = document.getElementById("pickup-date-coldStorage").value;
+                const productQuantity = document.getElementById("product-quantity").value;
+                const productType = document.getElementById("product-type").value;
+
+                if (!storageLocation || !pickupDate || !productQuantity || !productType) {
+                    document.getElementById("coldStorage-userinput").innerHTML = "Please fill all the details before proceeding!";
+                    return; // Exit the function if any field is empty
+                }
+
+                // Set the values in the modal
+                document.getElementById("modal-storage-location").value = storageLocation;
+                document.getElementById("modal-pickup-date").value = pickupDate;
+                document.getElementById("modal-product-quantity").value = productQuantity;
+                document.getElementById("modal-product-type").value = productType;
+
+                // Programmatically open the modal
+                $("#coldStorageModal").modal("show");
+            }
+
+            function coldStorageModalSubmit() {
+                const yourName = document.getElementById("coldStore-name").value;
+                const yourPhonenum = document.getElementById("coldStore-phone").value;
+
+                if (!yourName || !yourPhonenum) {
+                    document.getElementById("success-contact-submit").innerHTML = "Please fill all the details before proceeding!";
+                    return; // Exit the function if any field is empty
+                }
+
+                submitted = true;
+                return true;
+            }
+            function populateintegratedModal() {
+                // Get the values from the form
+                const pickupLocation = document.getElementById("pickup-location-integrated").value;
+                const dropLocation = document.getElementById("drop-location-integrated").value;
+                const pickup_Date = document.getElementById("pickup-date-integrated").value;
+                const product_Quantity = document.getElementById("product-quantity-integrated").value;
+                const product_Type = document.getElementById("product-type-integrated").value;
+
+                if (!pickupLocation || !dropLocation || !pickup_Date || !product_Quantity || !product_Type) {
+                    document.getElementById("integrated-userinput").innerHTML = "Please fill all the details before proceeding!";
+                    return; // Exit the function if any field is empty
+                }
+
+                // Set the values in the modal
+                document.getElementById("modal-pickup-location-integrated").value = pickupLocation;
+                document.getElementById("modal-drop-location-integrated").value = dropLocation;
+                document.getElementById("modal-pickup-date-integrated").value = pickup_Date;
+                document.getElementById("modal-product-quantity-integrated").value = product_Quantity;
+                document.getElementById("modal-product-type-integrated").value = product_Type;
+
+                // Programmatically open the modal
+                $("#integratedModal").modal("show");
+            }
+
+            function integratedModalSubmit() {
+                const yourNameinte = document.getElementById("integrated-name").value;
+                const yourPhonenuminte = document.getElementById("integrated-phone").value;
+
+                if (!yourNameinte || !yourPhonenuminte) {
+                    document.getElementById("success-contact-submit-integrated").innerHTML = "Please fill all the details before proceeding!";
+                    return; // Exit the function if any field is empty
+                }
+
+                submitted = true;
+                return true;
+            }
+        </script>
 
         <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -804,8 +857,7 @@
         <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
         <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
 
         <!-- Template Javascript -->
         <script src="js/main.js"></script>

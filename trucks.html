@@ -91,21 +91,6 @@
                             <a href="index.html" class="nav-item nav-link active">Home</a>
                             <a href="about.html" class="nav-item nav-link">About</a>
                             <a href="service.html" class="nav-item nav-link">Service</a>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vehicles</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="car.html" class="dropdown-item">Car Listing</a>
-                                    <a href="detail.html" class="dropdown-item">Car Detail</a>
-                                    <a href="booking.html" class="dropdown-item">Car Booking</a>
-                                </div>
-                            </div>
-                            <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Gallery</a>
-                                <div class="dropdown-menu rounded-0 m-0">
-                                    <a href="team.html" class="dropdown-item">The Team</a>
-                                    <a href="testimonial.html" class="dropdown-item">Testimonial</a>
-                                </div>
-                            </div>
                             <a href="contact.html" class="nav-item nav-link">Contact</a>
                             <a href="login.html" class="nav-item nav-link">Login</a>
                         </div>
@@ -362,21 +347,19 @@
                     // Display each vehicle
                     vehicles.forEach((vehicle) => {
                         const vehicleCard = document.createElement("div");
-                        vehicleCard.className = "col-xl-7 col-12 my-2 p-0 border shadow rounded";
+                        vehicleCard.className = "vehicle_box my-2 p-0 border shadow rounded";
                         vehicleCard.innerHTML = `
                 <div class="bg-${vehicle.vehicleType} d-flex justify-content-between">
-                    <h5 class="p-2">${vehicle.vehicleName} (${vehicle.id})</h5>
+                    <h5 class="p-2">${vehicle.vehicleName}</h5>
                     <h5 class="p-2">Runs On: M T W T F S S</h5>
                 </div>
-                <div class="p-4">
-                    <div class="d-flex justify-content-between">
-                    <p><i class="text-dark fa fa-location-arrow mr-2"></i> ${vehicle.startFrom},${vehicle.dropLocations}</p>
-                    </div>
+                <div class="p-sm-4 p-2 vehicle_info">
+                    <p class="vehicle_route"><i class="text-dark fa fa-location-arrow mr-2"></i> ${vehicle.startFrom},${vehicle.dropLocations}</p>
                     <p><i class="text-dark fa fa-archive mr-2"></i> ${vehicle.capacity} Kg (${vehicle.size})</p>
                     <p><i class="text-dark fa fa-thermometer-half mr-2"></i> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
                 </div>
-                <div class="m-2 p-4 d-flex justify-content-between align-items-center">
-                            <div><p class="font-weight-bold"><span class="result"></span></p></div>
+                <div class="m-2 p-sm-4 p-2 d-flex justify-content-between align-items-center">
+                            <div class="bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2"><p class="estimated_price font-weight-bold result mb-0"></p></div>
                             <button type="button" class="btn-booknow">Book Now</button>
                         </div>`;
 

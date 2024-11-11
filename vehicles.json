@@ -6,7 +6,7 @@
     "size": "Small",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Mumbai",
-    "dropLocations": ["Delhi", "Jaipur", "Agra", "Pune", "Ahmedabad", "Nagpur", "Bhopal", "Indore", "Rajkot", "Surat"],
+    "dropLocations": [" Delhi", " Jaipur", " Agra", " Pune", " Ahmedabad", " Nagpur", " Bhopal", " Indore", " Rajkot", " Surat"],
     "vehicleType": "Frozen"
   },
   {
@@ -16,7 +16,7 @@
     "size": "Small",
     "tempRange": "0°C to 25°C",
     "startFrom": "Chennai",
-    "dropLocations": ["Bangalore", "Hyderabad", "Coimbatore", "Madurai", "Vellore", "Puducherry", "Tiruchirappalli", "Salem"],
+    "dropLocations": [" Bangalore", " Hyderabad", " Coimbatore", " Madurai", " Vellore", " Puducherry", " Tiruchirappalli", " Salem"],
     "vehicleType": "Chiller"
   },
   {
@@ -26,7 +26,7 @@
     "size": "Small",
     "tempRange": "25°C and above",
     "startFrom": "Kolkata",
-    "dropLocations": ["Patna", "Ranchi", "Guwahati", "Bhubaneswar", "Jamshedpur", "Dhanbad", "Durgapur", "Cuttack"],
+    "dropLocations": [" Patna", " Ranchi", " Guwahati", " Bhubaneswar", " Jamshedpur", " Dhanbad", " Durgapur", " Cuttack"],
     "vehicleType": "Dry"
   },
   {
@@ -36,7 +36,7 @@
     "size": "Small",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Delhi",
-    "dropLocations": ["Lucknow", "Kanpur", "Varanasi", "Jaipur", "Chandigarh", "Dehradun", "Agra", "Faridabad"],
+    "dropLocations": [" Lucknow", " Kanpur", " Varanasi", " Jaipur", " Chandigarh", " Dehradun", " Agra", " Faridabad"],
     "vehicleType": "Frozen"
   },
   {
@@ -46,7 +46,7 @@
     "size": "Small",
     "tempRange": "0°C to 25°C",
     "startFrom": "Hyderabad",
-    "dropLocations": ["Vijayawada", "Visakhapatnam", "Warangal", "Nellore", "Kurnool", "Tirupati", "Khammam", "Eluru"],
+    "dropLocations": [" Vijayawada", " Visakhapatnam", " Warangal", " Nellore", " Kurnool", " Tirupati", " Khammam", " Eluru"],
     "vehicleType": "Chiller"
   },
   {
@@ -56,7 +56,7 @@
     "size": "Large",
     "tempRange": "25°C and above",
     "startFrom": "Mumbai",
-    "dropLocations": ["Surat", "Ahmedabad", "Rajkot", "Vadodara", "Nashik", "Pune", "Aurangabad", "Kolhapur", "Jalgaon"],
+    "dropLocations": [" Surat", " Ahmedabad", " Rajkot", " Vadodara", " Nashik", " Pune", " Aurangabad", " Kolhapur", " Jalgaon"],
     "vehicleType": "Dry"
   },
   {
@@ -66,7 +66,7 @@
     "size": "Medium",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Chandigarh",
-    "dropLocations": ["Amritsar", "Jalandhar", "Ludhiana", "Pathankot", "Ambala", "Patiala", "Hoshiarpur", "Moga", "Karnal"],
+    "dropLocations": [" Amritsar", " Jalandhar", " Ludhiana", " Pathankot", " Ambala", " Patiala", " Hoshiarpur", " Moga", " Karnal"],
     "vehicleType": "Frozen"
   },
   {
@@ -76,7 +76,7 @@
     "size": "Medium",
     "tempRange": "0°C to 25°C",
     "startFrom": "Pune",
-    "dropLocations": ["Nagpur", "Aurangabad", "Nashik", "Solapur", "Sangli", "Kolhapur", "Amravati", "Jalgaon", "Latur"],
+    "dropLocations": [" Nagpur", " Aurangabad", " Nashik", " Solapur", " Sangli", " Kolhapur", " Amravati", " Jalgaon", " Latur"],
     "vehicleType": "Chiller"
   },
   {
@@ -86,7 +86,7 @@
     "size": "Medium",
     "tempRange": "25°C and above",
     "startFrom": "Jaipur",
-    "dropLocations": ["Jodhpur", "Udaipur", "Bikaner", "Kota", "Ajmer", "Bhilwara", "Alwar", "Sikar", "Pali", "Nagaur"],
+    "dropLocations": [" Jodhpur", " Udaipur", " Bikaner", " Kota", " Ajmer", " Bhilwara", " Alwar", " Sikar", " Pali", " Nagaur"],
     "vehicleType": "Dry"
   },
   {
@@ -96,7 +96,7 @@
     "size": "Medium",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Ahmedabad",
-    "dropLocations": ["Vadodara", "Surat", "Rajkot", "Bhavnagar", "Jamnagar", "Gandhinagar", "Junagadh", "Porbandar"],
+    "dropLocations": [" Vadodara", " Surat", " Rajkot", " Bhavnagar", " Jamnagar", " Gandhinagar", " Junagadh", " Porbandar"],
     "vehicleType": "Frozen"
   },
   {
@@ -106,7 +106,7 @@
     "size": "Medium",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Mumbai",
-    "dropLocations": ["Nagpur", "Pune", "Nashik", "Solapur", "Kolhapur", "Aurangabad", "Dhule", "Amravati"],
+    "dropLocations": [" Nagpur", " Pune", " Nashik", " Solapur", " Kolhapur", " Aurangabad", " Dhule", " Amravati"],
     "vehicleType": "Frozen"
   },
   {
@@ -116,7 +116,7 @@
     "size": "Small",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Bhopal",
-    "dropLocations": ["Indore", "Jabalpur", "Gwalior", "Ujjain", "Sagar", "Satna", "Rewa", "Dewas", "Khandwa"],
+    "dropLocations": [" Indore", " Jabalpur", " Gwalior", " Ujjain", " Sagar", " Satna", " Rewa", " Dewas", " Khandwa"],
     "vehicleType": "Frozen"
   },
   {
@@ -126,7 +126,7 @@
     "size": "Small",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Lucknow",
-    "dropLocations": ["Kanpur", "Allahabad", "Varanasi", "Gorakhpur", "Bareilly", "Jhansi", "Mathura", "Faizabad", "Moradabad"],
+    "dropLocations": [" Kanpur", " Allahabad", " Varanasi", " Gorakhpur", " Bareilly", " Jhansi", " Mathura", " Faizabad", " Moradabad"],
     "vehicleType": "Frozen"
   },
   {
@@ -136,7 +136,7 @@
     "size": "Small",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Bengaluru",
-    "dropLocations": ["Mysore", "Hubli", "Mangalore", "Belgaum", "Gulbarga", "Davangere", "Shimoga", "Tumkur", "Raichur"],
+    "dropLocations": [" Mysore", " Hubli", " Mangalore", " Belgaum", " Gulbarga", " Davangere", " Shimoga", " Tumkur", " Raichur"],
     "vehicleType": "Frozen"
   },
   {
@@ -146,7 +146,7 @@
     "size": "Small",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Guwahati",
-    "dropLocations": ["Shillong", "Imphal", "Aizawl", "Kohima", "Agartala", "Dibrugarh", "Tezpur", "Silchar", "Tinsukia"],
+    "dropLocations": [" Shillong", " Imphal", " Aizawl", " Kohima", " Agartala", " Dibrugarh", " Tezpur", " Silchar", " Tinsukia"],
     "vehicleType": "Frozen"
   },
   {
@@ -156,7 +156,7 @@
     "size": "Large",
     "tempRange": "-25°C to 0°C",
     "startFrom": "Ranchi",
-    "dropLocations": ["Jamshedpur", "Dhanbad", "Bokaro", "Hazaribagh", "Deoghar", "Giridih", "Ramgarh", "Dumka", "Gumla"],
+    "dropLocations": [" Jamshedpur", " Dhanbad", " Bokaro", " Hazaribagh", " Deoghar", " Giridih", " Ramgarh", " Dumka", " Gumla"],
     "vehicleType": "Frozen"
   }
 ]
