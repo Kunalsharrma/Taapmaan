@@ -232,6 +232,7 @@
                                         </select>
                                     </div>
                                     <div class="col-xl-12 px-1">
+                                        <p id="Logistics-userinput"></p>
                                         <button id="nextButton" class="btn btn-primaryorange btn-block mt-3 my-sm-3" type="submit" style="height: 50px">Next >></button>
                                     </div>
                                     <!-- <p id="success-contact-submit"></p> -->
@@ -771,20 +772,25 @@
             document.getElementById("nextButton").addEventListener("click", function (event) {
                 event.preventDefault();
                 // Get form values
-                const pickupLocation = document.getElementById("pickup-location").value;
-                const dropLocation = document.getElementById("drop-location").value;
-                const pickupDate = document.getElementById("pickup-date").value;
-                const selectedVehicle = document.getElementById("selected-vehicle").value;
-                const quantityProduct = document.getElementById("quantity-product").value;
-                const typeProduct = document.getElementById("type-product").value;
+                const pickupLocation_Log = document.getElementById("pickup-location").value;
+                const dropLocation_Log = document.getElementById("drop-location").value;
+                const pickupDate_Log = document.getElementById("pickup-date").value;
+                const selectedVehicle_Log = document.getElementById("selected-vehicle").value;
+                const quantityProduct_Log = document.getElementById("quantity-product").value;
+                const typeProduct_Log = document.getElementById("type-product").value;
+
+                if (!pickupLocation_Log || !dropLocation_Log || !pickupDate_Log || !selectedVehicle_Log || !quantityProduct_Log || !typeProduct_Log) {
+                    document.getElementById("Logistics-userinput").innerHTML = "Please fill all the details before proceeding!";
+                    return; // Exit the function if any field is empty
+                }
 
                 // Save data in localStorage
-                localStorage.setItem("pickupLocation", pickupLocation);
-                localStorage.setItem("dropLocation", dropLocation);
-                localStorage.setItem("pickupDate", pickupDate);
-                localStorage.setItem("selectedVehicle", selectedVehicle);
-                localStorage.setItem("quantityProduct", quantityProduct);
-                localStorage.setItem("typeProduct", typeProduct);
+                localStorage.setItem("pickupLocation", pickupLocation_Log);
+                localStorage.setItem("dropLocation", dropLocation_Log);
+                localStorage.setItem("pickupDate", pickupDate_Log);
+                localStorage.setItem("selectedVehicle", selectedVehicle_Log);
+                localStorage.setItem("quantityProduct", quantityProduct_Log);
+                localStorage.setItem("typeProduct", typeProduct_Log);
 
                 // Redirect to the next page
                 window.location.href = "trucks.html";

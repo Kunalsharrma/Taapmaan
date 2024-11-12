@@ -40,7 +40,7 @@
             style="display: none"
             onload="if(submitted){
             const success = document.getElementById('success-contact-submit')
-            success.innerHTML = 'Thankyou for contacting us! We will reach out to you soon.'
+            success.innerHTML = 'We have recieved your details. We will contact you soon regarding it. Thankyou!'
     }"
         ></iframe>
         <!-- Topbar Start -->
@@ -103,34 +103,35 @@
             <div class="container">
                 <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
                 <div class="d-flex align-items-center justify-content-center my-4">
-                    <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLScI0DLpNsUX2LF37T8BZw4r7o-K43pOEh0ZAOANpXhELGlPww/formResponse" method="post" target="hidden_iframe3" id="truckFilterForm">
+                    <form id="truckFilterForm">
                         <div class="row justify-content-center">
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Pickup Location:</label>
-                                <input id="pickup-location" name="entry.1226122781" type="text" class="form-control p-3" placeholder="Enter pickup location" required />
+                                <input id="pickup-location" type="text" class="form-control p-3" placeholder="Enter pickup location" required />
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Drop Location:</label>
-                                <input id="drop-location" name="entry.68159007" type="text" class="form-control p-3" placeholder="Enter drop location" required />
+                                <input id="drop-location" type="text" class="form-control p-3" placeholder="Enter drop location" required />
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Pickup Date:</label>
-                                <input id="pickup-date" name="entry.989363744" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                <input id="pickup-date" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Vehicle Type:</label>
-                                <select id="selected-vehicle" name="entry.2143236161" class="form-control p-2" style="min-height: 40px">
+                                <select id="selected-vehicle" class="form-control p-2" style="min-height: 40px">
                                     <option value="Frozen">Frozen</option>
                                     <option value="Chiller">Chiller</option>
                                     <option value="Dry">Dry</option>
                                 </select>
                             </div>
+
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Quantity Of Product:</label>
-                                <select id="quantity-product" class="custom-select px-4 mb-3" name="entry.541085222" style="height: 40px">
+                                <select id="quantity-product" class="custom-select px-4 mb-3" style="height: 40px">
                                     <option selected>Quantity of product</option>
                                     <option value="0-100Kg">00-100Kg</option>
                                     <option value="100-250kg">100-250kg</option>
@@ -139,9 +140,10 @@
                                     <option value="1000-8000kg">1000-8000kg</option>
                                 </select>
                             </div>
+
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Type Of Product:</label>
-                                <select id="type-product" class="custom-select px-4 mb-3" name="entry.863500876" style="height: 40px">
+                                <select id="type-product" class="custom-select px-4 mb-3" style="height: 40px">
                                     <option selected>Type of product</option>
                                     <option value="Frozen Food">Frozen Food</option>
                                     <option value="Dairy">Dairy</option>
@@ -157,7 +159,6 @@
                             <div class="row justify-content-center align-items-center my-3">
                                 <button type="submit" onclick="fetchAvailableTrucks()">Search</button>
                             </div>
-                            <p id="success-contact-submit"></p>
                         </div>
                     </form>
                 </div>
@@ -166,13 +167,47 @@
 
         <div class="all-vehicles">
             <div id="vehicleResults" class="row justify-content-center mx-0 my-4"></div>
-            <!-- <div class="price-estimation col-md-3">
-                <div class="rounded border bg-secondaryblue">
-                    <h5 class="text-center">Price Estimation</h5>
-                    <div class="result"></div>    
-                    <button id="checkLocations">Location</button>
+        </div>
+
+        <!-- Vehicle Modal -->
+        <div class="modal fade" id="vehicleModal" tabindex="-1" aria-labelledby="vehicleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Confirm your details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- https://docs.google.com/forms/d/e/1FAIpQLSciUs5rnk0JtcReAfl8jeYXZmk-tINfyioYc-1Z3SVwCbk6kQ/viewform?usp=pp_url&entry.971733700=name&entry.338509281=phone&entry.74539831=pickup&entry.1797661727=drop&entry.860171057=date&entry.1674096571=vehicletype&entry.495744575=quantity&entry.860091518=type -->
+                        <form action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSciUs5rnk0JtcReAfl8jeYXZmk-tINfyioYc-1Z3SVwCbk6kQ/formResponse" method="post" target="hidden_iframe3" onsubmit="return vehicleModalSubmit()">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <input id="yourName" name="entry.971733700" type="text" class="form-control p-3 m-2" placeholder="Your Name" required />
+                                <input id="yourPhonenumber" name="entry.338509281" type="text" class="form-control p-3 m-2" placeholder="Your Phone No." required />
+                            </div>
+                            <hr />
+
+                            <div class="row mt-3 justify-content-center align-items-center">
+                                <p class="col-11"><strong>Vehicle Name:</strong> <span id="modalVehicleName"></span></p>
+                                <p class="col-11"><strong>Temperature Range:</strong> <span id="modalTempRange"></span></p>
+                                <!-- <p><strong>Locations Covered:</strong> <span id="modalLocations"></span></p> -->
+                                <p class="col-11"><strong>Capacity:</strong> <span id="modalCapacity"></span></p>
+                                <input id="modal-pickup-location" name="entry.74539831" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
+                                <input id="modal-drop-location" name="entry.1797661727" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
+                                <input id="modal-pickup-date" name="entry.860171057" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
+                                <input id="modal-selected-vehicle" name="entry.1674096571" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
+                                <input id="modal-quantity-product" name="entry.495744575" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
+                                <input id="modal-type-product" name="entry.860091518" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
+                            </div>
+                            <div class="modal-footer">
+                                <p id="success-contact-submit" class="text-center"></p>
+                                <button type="submit" class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div> -->
+            </div>
         </div>
 
         <!-- Footer Start -->
@@ -202,42 +237,6 @@
                         <a class="text-body" href="#"><i class="fa fa-angle-right text-white mr-2"></i>Help & FQAs</a>
                     </div>
                 </div>
-                <!-- <div class="col-lg-3 col-md-6 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Car Gallery</h4>
-                    <div class="row mx-n1">
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-1.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-2.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-3.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-4.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-5.jpg" alt="" /></a>
-                        </div>
-                        <div class="col-4 px-1 mb-2">
-                            <a href=""><img class="w-100" src="img/gallery-6.jpg" alt="" /></a>
-                        </div>
-                    </div>
-                </div> -->
-                <!-- <div class="col-lg-3 col-md-6 mb-5">
-                    <h4 class="text-uppercase text-light mb-4">Newsletter</h4>
-                    <p class="mb-4">Volup amet magna clita tempor. Tempor sea eos vero ipsum. Lorem lorem sit sed elitr sed kasd et</p>
-                    <div class="w-100 mb-3">
-                        <div class="input-group">
-                            <input type="text" class="form-control bg-greyishblue border-dark" style="padding: 25px" placeholder="Your Email" />
-                            <div class="input-group-append">
-                                <button class="btn btn-primaryorange text-uppercase px-3">Sign Up</button>
-                            </div>
-                        </div>
-                    </div>
-                    <i>Lorem sit sed elitr sed kasd et</i>
-                </div> -->
             </div>
         </div>
         <div class="container-fluid bg-greyishblue py-4 px-sm-3 px-md-5">
@@ -308,7 +307,6 @@
             // Initialize Google Maps Autocomplete after the page loads
             google.maps.event.addDomListener(window, "load", initAutocomplete);
         </script>
-
         <script>
             // Populate fields with data from localStorage
             document.getElementById("pickup-location").value = localStorage.getItem("pickupLocation");
@@ -327,25 +325,12 @@
                 const typeProduct = document.getElementById("type-product").value;
 
                 try {
-                    // Fetch data directly from the local vehicles.json file
                     const response = await fetch("vehicles.json");
-                    const data = await response.json();
-
-                    console.log("Fetched vehicles:", data); // Check the structure to confirm
-
+                    const vehicles = await response.json();
                     const vehicleResults = document.getElementById("vehicleResults");
-                    vehicleResults.innerHTML = ""; // Clear previous results
+                    vehicleResults.innerHTML = "";
 
-                    // Access the nested array, assuming it’s inside `data`
-                    const vehicles = data; // Adjust this based on the actual structure of vehicles.json
-
-                    if (!Array.isArray(vehicles)) {
-                        vehicleResults.innerHTML = "<p>Unexpected response format. No vehicles available.</p>";
-                        return;
-                    }
-
-                    // Display each vehicle
-                    vehicles.forEach((vehicle) => {
+                    vehicles.forEach((vehicle, index) => {
                         const vehicleCard = document.createElement("div");
                         vehicleCard.className = "vehicle_box my-2 p-0 border shadow rounded";
                         vehicleCard.innerHTML = `
@@ -359,22 +344,77 @@
                     <p><i class="text-dark fa fa-thermometer-half mr-2"></i> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
                 </div>
                 <div class="m-2 p-sm-4 p-2 d-flex justify-content-between align-items-center">
-                            <div class="bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2"><p class="estimated_price font-weight-bold result mb-0"></p></div>
-                            <button type="button" class="btn-booknow">Book Now</button>
-                        </div>`;
+                    <div class="bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2"><p class="estimated_price font-weight-bold result mb-0"></p></div>
+                    <button type="button" class="btn-booknow btn btn-primary" data-target="#vehicleModal" data-index="${index}" onclick="populateVehicleModal()">Book Now</button>
+                </div>`;
 
                         vehicleResults.appendChild(vehicleCard);
                     });
+
+                    // Get references to modal fields
+                    const modalVehicleName = document.getElementById("modalVehicleName");
+                    const modalTempRange = document.getElementById("modalTempRange");
+                    // const modalLocations = document.getElementById("modalLocations");
+                    const modalCapacity = document.getElementById("modalCapacity");
+
+                    // Event delegation to handle "Book Now" clicks
+                    vehicleResults.addEventListener("click", (e) => {
+                        if (e.target.classList.contains("btn-booknow")) {
+                            const vehicleIndex = e.target.getAttribute("data-index");
+                            const vehicle = vehicles[vehicleIndex];
+                            console.log(vehicle);
+
+                            // Populate modal with vehicle data
+                            modalVehicleName.textContent = vehicle.vehicleName;
+                            modalTempRange.textContent = `${vehicle.tempRange}`;
+                            // modalLocations.textContent = `${vehicle.startFrom}, ${vehicle.dropLocations}`;
+                            modalCapacity.textContent = `${vehicle.capacity} Kg (${vehicle.size})`;
+                        }
+                    });
                 } catch (error) {
                     console.error("Error fetching vehicles:", error);
-                    vehicleResults.innerHTML = "<p>Unable to fetch vehicle data.</p>";
+                    document.getElementById("vehicleResults").innerHTML = "<p>Unable to fetch vehicle data.</p>";
                 }
             }
 
             fetchAvailableTrucks();
         </script>
+        <script>
+            function populateVehicleModal() {
+                // Get the values from the form
+                const pickupLocation = document.getElementById("pickup-location").value;
+                const dropLocation = document.getElementById("drop-location").value;
+                const pickupDate = document.getElementById("pickup-date").value;
+                const selectedProduct = document.getElementById("selected-vehicle").value;
+                const productQuantity = document.getElementById("quantity-product").value;
+                const productType = document.getElementById("type-product").value;
 
-        <!-- calculate price  -->
+
+                // Set the values in the modal
+                document.getElementById("modal-pickup-location").value = pickupLocation;
+                document.getElementById("modal-drop-location").value = dropLocation;
+                document.getElementById("modal-pickup-date").value = pickupDate;
+                document.getElementById("modal-selected-vehicle").value = selectedProduct;
+                document.getElementById("modal-quantity-product").value = productQuantity;
+                document.getElementById("modal-type-product").value = productType;
+
+                // Programmatically open the modal
+                $("#vehicleModal").modal("show");
+            }
+
+            function vehicleModalSubmit() {
+                const yourName = document.getElementById("yourName").value;
+                const yourPhonenum = document.getElementById("yourPhonenumber").value;
+
+                if (!yourName || !yourPhonenum) {
+                    document.getElementById("success-contact-submit").innerHTML = "Please fill all the details before proceeding!";
+                    return;
+                }
+
+                submitted = true;
+                return true;
+            }
+        </script>
 
         <script src="js/priceEstimation.js"></script>
 
