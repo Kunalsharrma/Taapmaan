@@ -24,7 +24,9 @@ html {
 
 
 
-
+.bg-black{
+    background-color: #000000;
+}
 .bg-Frozen{
     background-color: #eaebec;
 }
