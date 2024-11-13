@@ -50,7 +50,7 @@
                     <div class="d-inline-flex align-items-center">
                         <a class="text-dark pr-3" href=""><i class="fa fa-phone-alt mr-2"></i>0129 406 5262</a>
                         <span class="text-dark">|</span>
-                        <a class="text-dark px-3" href=""><i class="fa fa-envelope mr-2"></i>Taapmaanlive@gmail.com</a>
+                        <a class="text-dark px-3" href=""><i class="fa fa-envelope mr-2"></i>taapmaanlive@gmail.com</a>
                     </div>
                 </div>
                 <div class="col-md-6 text-center text-lg-right">
@@ -107,43 +107,45 @@
                         <div class="row justify-content-center">
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Pickup Location:</label>
-                                <input id="pickup-location" type="text" class="form-control p-3" placeholder="Enter pickup location" required />
+                                <input id="pickup-location" type="text" class="form-control p-3" placeholder="Enter pickup location" readonly />
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Drop Location:</label>
-                                <input id="drop-location" type="text" class="form-control p-3" placeholder="Enter drop location" required />
+                                <input id="drop-location" type="text" class="form-control p-3" placeholder="Enter drop location" readonly />
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Pickup Date:</label>
-                                <input id="pickup-date" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" />
+                                <input id="pickup-date" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" readonly />
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Vehicle Type:</label>
-                                <select id="selected-vehicle" class="form-control p-2" style="min-height: 40px">
+                                <!-- <select id="selected-vehicle" class="form-control p-2" style="min-height: 40px">
                                     <option value="Frozen">Frozen</option>
                                     <option value="Chiller">Chiller</option>
                                     <option value="Dry">Dry</option>
-                                </select>
+                                </select> -->
+                                <input id="selected-vehicle" class="form-control p-2" readonly></input>
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Quantity Of Product:</label>
-                                <select id="quantity-product" class="custom-select px-4 mb-3" style="height: 40px">
+                                <!-- <select id="quantity-product" class="custom-select px-4 mb-3" style="height: 40px">
                                     <option selected>Quantity of product</option>
-                                    <option value="0-100Kg">00-100Kg</option>
-                                    <option value="100-250kg">100-250kg</option>
-                                    <option value="250-700kg">250-700kg</option>
-                                    <option value="700-1000kg">700-1000kg</option>
-                                    <option value="1000-8000kg">1000-8000kg</option>
-                                </select>
+                                    <option value="0-100">00-100Kg</option>
+                                    <option value="100-250">100-250kg</option>
+                                    <option value="250-700">250-700kg</option>
+                                    <option value="700-1000">700-1000kg</option>
+                                    <option value="1000-8000">1000-8000kg</option>
+                                </select> -->
+                                <input id="quantity-product" class="form-control p-2" readonly></input>
                             </div>
 
                             <div class="col-xl-4 col-6 d-flex flex-column my-2">
                                 <label>Type Of Product:</label>
-                                <select id="type-product" class="custom-select px-4 mb-3" style="height: 40px">
+                                <!-- <select id="type-product" class="custom-select px-4 mb-3" style="height: 40px">
                                     <option selected>Type of product</option>
                                     <option value="Frozen Food">Frozen Food</option>
                                     <option value="Dairy">Dairy</option>
@@ -153,12 +155,13 @@
                                     <option value="Ice Cream">Ice Cream</option>
                                     <option value="Frozen Peas">Frozen Peas</option>
                                     <option value="Others">Others</option>
-                                </select>
+                                </select> -->
+                                <input id="type-product" class="form-control p-2" readonly></input>
                             </div>
 
-                            <div class="row justify-content-center align-items-center my-3">
+                            <!-- <div class="row justify-content-center align-items-center my-3">
                                 <button type="submit" onclick="fetchAvailableTrucks()">Search</button>
-                            </div>
+                            </div> -->
                         </div>
                     </form>
                 </div>
@@ -217,7 +220,7 @@
                     <h4 class="text-uppercase text-light mb-4">Get In Touch</h4>
                     <p class="mb-2"><i class="fa fa-map-marker-alt text-white mr-3"></i>Sector 16A, SEO 59 lower ground floor</p>
                     <p class="mb-2"><i class="fa fa-phone-alt text-white mr-3"></i>0129 406 5262</p>
-                    <p><i class="fa fa-envelope text-white mr-3"></i>Taapmaanlive@gmail.com</p>
+                    <p><i class="fa fa-envelope text-white mr-3"></i>taapmaanlive@gmail.com</p>
                     <h6 class="text-uppercase text-white py-2">Follow Us</h6>
                     <div class="d-flex justify-content-start">
                         <a class="btn btn-lg btn-dark btn-lg-square mr-2" href="#"><i class="fab fa-twitter"></i></a>
@@ -274,38 +277,38 @@
             });
         </script>
         <script>
-            function initAutocomplete() {
-                var pickupInput = document.getElementById("pickup-location");
-                var dropInput = document.getElementById("drop-location");
-                var storageInput = document.getElementById("storage-location");
+            // function initAutocomplete() {
+            //     var pickupInput = document.getElementById("pickup-location");
+            //     var dropInput = document.getElementById("drop-location");
+            //     var storageInput = document.getElementById("storage-location");
 
-                var pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
-                var dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
-                var storageAutocomplete = new google.maps.places.Autocomplete(storageInput);
+            //     var pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
+            //     var dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
+            //     var storageAutocomplete = new google.maps.places.Autocomplete(storageInput);
 
-                pickupAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
-                dropAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
-                storageAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
+            //     pickupAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
+            //     dropAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
+            //     storageAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
 
-                // Add listeners to handle the selected place
-                pickupAutocomplete.addListener("place_changed", function () {
-                    var place = pickupAutocomplete.getPlace();
-                    console.log("Pickup location:", place);
-                });
+            //     // Add listeners to handle the selected place
+            //     pickupAutocomplete.addListener("place_changed", function () {
+            //         var place = pickupAutocomplete.getPlace();
+            //         console.log("Pickup location:", place);
+            //     });
 
-                dropAutocomplete.addListener("place_changed", function () {
-                    var place = dropAutocomplete.getPlace();
-                    console.log("Drop location:", place);
-                });
+            //     dropAutocomplete.addListener("place_changed", function () {
+            //         var place = dropAutocomplete.getPlace();
+            //         console.log("Drop location:", place);
+            //     });
 
-                storageAutocomplete.addListener("place_changed", function () {
-                    var place = storageAutocomplete.getPlace();
-                    console.log("Storage location:", place);
-                });
-            }
+            //     storageAutocomplete.addListener("place_changed", function () {
+            //         var place = storageAutocomplete.getPlace();
+            //         console.log("Storage location:", place);
+            //     });
+            // }
 
-            // Initialize Google Maps Autocomplete after the page loads
-            google.maps.event.addDomListener(window, "load", initAutocomplete);
+            // // Initialize Google Maps Autocomplete after the page loads
+            // google.maps.event.addDomListener(window, "load", initAutocomplete);
         </script>
         <script>
             // Populate fields with data from localStorage
@@ -330,9 +333,13 @@
                     const vehicleResults = document.getElementById("vehicleResults");
                     vehicleResults.innerHTML = "";
 
-                    vehicles.forEach((vehicle, index) => {
+                    vehicles.forEach(async (vehicle, index) => {
                         const vehicleCard = document.createElement("div");
                         vehicleCard.className = "vehicle_box my-2 p-0 border shadow rounded";
+
+                        const { pricePerKg, estimatedPriceRange } = await calculateEstimatedPrice(vehicle, pickupLocation, dropLocation, quantityProduct);
+
+
                         vehicleCard.innerHTML = `
                 <div class="bg-${vehicle.vehicleType} d-flex justify-content-between">
                     <h5 class="p-2">${vehicle.vehicleName}</h5>
@@ -344,7 +351,7 @@
                     <p><i class="text-dark fa fa-thermometer-half mr-2"></i> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
                 </div>
                 <div class="m-2 p-sm-4 p-2 d-flex justify-content-between align-items-center">
-                    <div class="bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2"><p class="estimated_price font-weight-bold result mb-0"></p></div>
+                    <div><p class="estimated_price font-weight-bold result mb-0 bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2">Estimated Price: ${estimatedPriceRange}</p><p class="mt-1 px-2 py-1 px-sm-3 py-sm-2">₹ ${pricePerKg} per Kg</p></div>
                     <button type="button" class="btn-booknow btn btn-primary" data-target="#vehicleModal" data-index="${index}" onclick="populateVehicleModal()">Book Now</button>
                 </div>`;
 
@@ -362,7 +369,6 @@
                         if (e.target.classList.contains("btn-booknow")) {
                             const vehicleIndex = e.target.getAttribute("data-index");
                             const vehicle = vehicles[vehicleIndex];
-                            console.log(vehicle);
 
                             // Populate modal with vehicle data
                             modalVehicleName.textContent = vehicle.vehicleName;
