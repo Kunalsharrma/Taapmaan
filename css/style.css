@@ -271,21 +271,13 @@ h6,
 }
 
 .page-header {
-    height: 400px;
-    margin-bottom: 90px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(rgba(28, 30, 50, 0.9), rgba(28, 30, 50, 0.9));
     background-attachment: fixed;
 }
 
-@media (max-width: 991.98px) {
-    .page-header {
-        height: 300px;
-    }
-}
 
 .service-item {
     height: fit-content;
