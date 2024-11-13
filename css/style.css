@@ -187,15 +187,6 @@ h6,
     z-index: 99;
 }
 
-/* .nav-bar::before {
-    position: absolute;
-    content: "";
-    width: 100%;
-    height: 50%;
-    top: 0;
-    left: 0;
-    background: #ff6106;
-} */
 
 .nav-bar::after {
     position: absolute;
@@ -257,24 +248,23 @@ h6,
     .vehicle_box{
         width: 95vw;
     }
-    h5{
-        font-size: 14px;
-    }
-    .vehicle_info p{
-        font-size: 10px;
-    }
-    .btn-booknow, .estimated_price{
-        font-size: 12px;
-    }
+    
 }
 
 @media (max-width: 400px) {
-    /* .service-box h6{
-        display: none;
-    } */
      .about_stats_card h4{
         font-size: 18px;
      }
+    
+}
+@media (min-width: 992px) {
+     
+.userfilled-form {
+    height: fit-content;
+    position: sticky;
+    top: 14vh;
+    bottom: 6vh;
+}
     
 }
 
@@ -535,7 +525,7 @@ body {
         height: 500px;
     }
     .vehicle_box{
-        width: 80vw;
+        width: 90vw;
     }
 }
 @media only screen and (max-width: 800px) {
@@ -571,5 +561,15 @@ body {
     .form-overlay-container{
         height: fit-content;
     }
+    h5{
+        font-size: 14px;
+    }
+    .vehicle_info p{
+        font-size: 10px;
+    }
+    .btn-booknow, .estimated_price{
+        font-size: 10px;
+    }
+
     
 }

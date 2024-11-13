@@ -100,39 +100,41 @@
         </div>
         <!-- Navbar End -->
         <div style="background-color: #edf9ff">
-            <div class="container">
+            <div>
                 <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
-                <div class="d-flex align-items-center justify-content-center my-4">
-                    <form id="truckFilterForm">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Pickup Location:</label>
-                                <input id="pickup-location" type="text" class="form-control p-3" placeholder="Enter pickup location" readonly />
-                            </div>
 
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Drop Location:</label>
-                                <input id="drop-location" type="text" class="form-control p-3" placeholder="Enter drop location" readonly />
-                            </div>
+                <div class="row mx-md-5 mx-2">
+                    <div class="col-lg-3 col-12 userfilled-form bg-white shadow p-3 rounded-lg d-flex align-items-center justify-content-center my-4">
+                        <form id="truckFilterForm">
+                            <div class="row justify-content-center">
+                                <div class="col-6 col-md-4 col-lg-11 d-flex flex-column my-2">
+                                    <label>Pickup Location:</label>
+                                    <input id="pickup-location" type="text" class="form-control p-3" placeholder="Enter pickup location" readonly />
+                                </div>
 
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Pickup Date:</label>
-                                <input id="pickup-date" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" readonly />
-                            </div>
+                                <div class="col-6 col-md-4 col-lg-11 d-flex flex-column my-2">
+                                    <label>Drop Location:</label>
+                                    <input id="drop-location" type="text" class="form-control p-3" placeholder="Enter drop location" readonly />
+                                </div>
 
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Vehicle Type:</label>
-                                <!-- <select id="selected-vehicle" class="form-control p-2" style="min-height: 40px">
+                                <div class="col-6 col-md-4 col-lg-11 d-flex flex-column my-2">
+                                    <label>Pickup Date:</label>
+                                    <input id="pickup-date" type="text" class="form-control p-3 datetimepicker-input" placeholder="Pickup Date" data-target="#date" data-toggle="datetimepicker" readonly />
+                                </div>
+
+                                <div class="col-6 col-md-4 col-lg-11 d-flex flex-column my-2">
+                                    <label>Vehicle Type:</label>
+                                    <!-- <select id="selected-vehicle" class="form-control p-2" style="min-height: 40px">
                                     <option value="Frozen">Frozen</option>
                                     <option value="Chiller">Chiller</option>
                                     <option value="Dry">Dry</option>
                                 </select> -->
-                                <input id="selected-vehicle" class="form-control p-2" readonly></input>
-                            </div>
+                                    <input id="selected-vehicle" class="form-control p-2" readonly />
+                                </div>
 
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Quantity Of Product:</label>
-                                <!-- <select id="quantity-product" class="custom-select px-4 mb-3" style="height: 40px">
+                                <div class="col-6 col-md-4 col-lg-11 d-flex flex-column my-2">
+                                    <label>Quantity Of Product:</label>
+                                    <!-- <select id="quantity-product" class="custom-select px-4 mb-3" style="height: 40px">
                                     <option selected>Quantity of product</option>
                                     <option value="0-100">00-100Kg</option>
                                     <option value="100-250">100-250kg</option>
@@ -140,12 +142,12 @@
                                     <option value="700-1000">700-1000kg</option>
                                     <option value="1000-8000">1000-8000kg</option>
                                 </select> -->
-                                <input id="quantity-product" class="form-control p-2" readonly></input>
-                            </div>
+                                    <input id="quantity-product" class="form-control p-2" readonly />
+                                </div>
 
-                            <div class="col-xl-4 col-6 d-flex flex-column my-2">
-                                <label>Type Of Product:</label>
-                                <!-- <select id="type-product" class="custom-select px-4 mb-3" style="height: 40px">
+                                <div class="col-6 col-md-4 col-lg-11 d-flex flex-column my-2">
+                                    <label>Type Of Product:</label>
+                                    <!-- <select id="type-product" class="custom-select px-4 mb-3" style="height: 40px">
                                     <option selected>Type of product</option>
                                     <option value="Frozen Food">Frozen Food</option>
                                     <option value="Dairy">Dairy</option>
@@ -156,20 +158,20 @@
                                     <option value="Frozen Peas">Frozen Peas</option>
                                     <option value="Others">Others</option>
                                 </select> -->
-                                <input id="type-product" class="form-control p-2" readonly></input>
-                            </div>
+                                    <input id="type-product" class="form-control p-2" readonly />
+                                </div>
 
-                            <!-- <div class="row justify-content-center align-items-center my-3">
+                                <!-- <div class="row justify-content-center align-items-center my-3">
                                 <button type="submit" onclick="fetchAvailableTrucks()">Search</button>
                             </div> -->
-                        </div>
-                    </form>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="col-lg-9 col-12 all-vehicles">
+                        <div id="vehicleResults" class="row justify-content-center mx-0 my-4"></div>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="all-vehicles">
-            <div id="vehicleResults" class="row justify-content-center mx-0 my-4"></div>
         </div>
 
         <!-- Vehicle Modal -->
@@ -194,8 +196,8 @@
                             <div class="row mt-3 justify-content-center align-items-center">
                                 <p class="col-11"><strong>Vehicle Name:</strong> <span id="modalVehicleName"></span></p>
                                 <p class="col-11"><strong>Temperature Range:</strong> <span id="modalTempRange"></span></p>
-                                <!-- <p><strong>Locations Covered:</strong> <span id="modalLocations"></span></p> -->
                                 <p class="col-11"><strong>Capacity:</strong> <span id="modalCapacity"></span></p>
+                                <p class="col-11"><strong>Price:</strong> <span id="modalEstimatedPrice"></span></p>
                                 <input id="modal-pickup-location" name="entry.74539831" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
                                 <input id="modal-drop-location" name="entry.1797661727" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
                                 <input id="modal-pickup-date" name="entry.860171057" type="text" class="form-control p-3 m-2 rounded-pill col-11" readonly />
@@ -335,10 +337,13 @@
 
                     vehicles.forEach(async (vehicle, index) => {
                         const vehicleCard = document.createElement("div");
-                        vehicleCard.className = "vehicle_box my-2 p-0 border shadow rounded";
+                        vehicleCard.className = "vehicle_box bg-white my-2 p-0 border shadow rounded";
 
                         const { pricePerKg, estimatedPriceRange } = await calculateEstimatedPrice(vehicle, pickupLocation, dropLocation, quantityProduct);
 
+                        // Store these values in the vehicle object for easy access
+    vehicle.estimatedPriceRange = estimatedPriceRange;
+    vehicle.pricePerKg = pricePerKg;
 
                         vehicleCard.innerHTML = `
                 <div class="bg-${vehicle.vehicleType} d-flex justify-content-between">
@@ -350,9 +355,9 @@
                     <p><i class="text-dark fa fa-archive mr-2"></i> ${vehicle.capacity} Kg (${vehicle.size})</p>
                     <p><i class="text-dark fa fa-thermometer-half mr-2"></i> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
                 </div>
-                <div class="m-2 p-sm-4 p-2 d-flex justify-content-between align-items-center">
-                    <div><p class="estimated_price font-weight-bold result mb-0 bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2">Estimated Price: ${estimatedPriceRange}</p><p class="mt-1 px-2 py-1 px-sm-3 py-sm-2">₹ ${pricePerKg} per Kg</p></div>
-                    <button type="button" class="btn-booknow btn btn-primary" data-target="#vehicleModal" data-index="${index}" onclick="populateVehicleModal()">Book Now</button>
+                <div class="m-2 px-sm-4 pb-sm-4 px-2 pb-2 pt-0 d-flex justify-content-between align-items-center">
+                    <div><p class="estimated_price font-weight-bold result mb-0 bg-${vehicle.vehicleType} rounded-pill px-2 py-1 px-sm-3 py-sm-2">Estimated Price: ${estimatedPriceRange}</p><p class="estimated_price mt-1 px-2 py-1 px-sm-3 py-sm-2">₹ ${pricePerKg} per Kg</p></div>
+                    <button type="button" class="btn-booknow rounded-pill px-3 py-2 btn btn-primary" data-target="#vehicleModal" data-index="${index}" onclick="populateVehicleModal()">Book Now</button>
                 </div>`;
 
                         vehicleResults.appendChild(vehicleCard);
@@ -361,8 +366,8 @@
                     // Get references to modal fields
                     const modalVehicleName = document.getElementById("modalVehicleName");
                     const modalTempRange = document.getElementById("modalTempRange");
-                    // const modalLocations = document.getElementById("modalLocations");
                     const modalCapacity = document.getElementById("modalCapacity");
+                    const modalEstimatedPrice = document.getElementById("modalEstimatedPrice");
 
                     // Event delegation to handle "Book Now" clicks
                     vehicleResults.addEventListener("click", (e) => {
@@ -373,8 +378,10 @@
                             // Populate modal with vehicle data
                             modalVehicleName.textContent = vehicle.vehicleName;
                             modalTempRange.textContent = `${vehicle.tempRange}`;
-                            // modalLocations.textContent = `${vehicle.startFrom}, ${vehicle.dropLocations}`;
                             modalCapacity.textContent = `${vehicle.capacity} Kg (${vehicle.size})`;
+                            // Populate the modal with the estimated price data
+        modalEstimatedPrice.textContent = `${vehicle.estimatedPriceRange} (₹ ${vehicle.pricePerKg} per Kg)`;
+
                         }
                     });
                 } catch (error) {
@@ -394,7 +401,6 @@
                 const selectedProduct = document.getElementById("selected-vehicle").value;
                 const productQuantity = document.getElementById("quantity-product").value;
                 const productType = document.getElementById("type-product").value;
-
 
                 // Set the values in the modal
                 document.getElementById("modal-pickup-location").value = pickupLocation;
