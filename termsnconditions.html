@@ -1,14 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <meta charset="UTF-8" />
-        <title>Taapmaan Cold Chain Logistics - Explore Available Vehicles for Efficient Cold Storage Solutions</title>
+        <meta charset="utf-8" />
+        <title>Taapmaan- Services</title>
         <meta content="width=device-width, initial-scale=1.0" name="viewport" />
         <meta content="Free HTML Templates" name="keywords" />
         <meta content="Free HTML Templates" name="description" />
-        <!-- Include your CSS and JavaScript libraries -->
-
-        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBJx3BhuXQPo97BXMmGj_hwnOLOlV-O2EQ&libraries=places"></script>
 
         <!-- Favicon -->
         <link href="img/favicon.ico" rel="icon" />
@@ -30,19 +27,8 @@
         <!-- Template Stylesheet -->
         <link href="css/style.css" rel="stylesheet" />
     </head>
+
     <body>
-        <script type="text/javascript">
-            var submitted = false;
-        </script>
-        <iframe
-            name="hidden_iframe3"
-            id="hidden_iframe3"
-            style="display: none"
-            onload="if(submitted){
-            const success = document.getElementById('success-contact-submit')
-            success.innerHTML = 'Thankyou for contacting us! We will reach out to you soon.'
-    }"
-        ></iframe>
         <!-- Topbar Start -->
         <div class="container-fluid py-2 px-lg-5 d-none d-lg-block bg-secondaryblue">
             <div class="row">
@@ -62,7 +48,7 @@
                         <a class="text-dark px-3" target="_blank" href="https://www.instagram.com/taapmaanlive?igsh=eW85Zmt0cWQ5ejM4&utm_source=qr">
                             <i class="fab fa-instagram"></i>
                         </a>
-
+                        
                         <a class="text-dark pl-3" target="_blank" href="https://www.youtube.com/watch?v=Jz4Wz4BvBFg">
                             <i class="fab fa-youtube"></i>
                         </a>
@@ -95,13 +81,60 @@
             </div>
         </div>
         <!-- Navbar End -->
-        <div style="background-color: #edf9ff">
-            <div class="container">
-                <h2 class="mb-md-4 text-center pt-4 text-secondaryblue">Your One Stop Cold <span class="text-primaryorangehg" style="color: #ffb125">& Hot Chain Solution</span></h2>
 
-                <div></div>
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header py-5">
+            <div class="d-inline-flex">
+                <h6 class="text-uppercase m-0"><a href="">Home</a></h6>
+                <h6 class="m-0 px-3">/</h6>
+                <h6 class="text-uppercase m-0">Term & Conditions</h6>
+            </div>
+            <h1 class="display-4 text-uppercase text-center mb-5">Term & Conditions</h1>
+            <div class="container row align-items-center">
+                <div class="my-3">
+                    <div class="d-flex align-items-center">
+                        <h1 class="display-4 text-primary text-center">01</h1>
+                        <h1 class="ml-2 text-uppercase">Introduction</h1>
+                    </div>
+                    <p>Welcome to Tapman Cold Storage. By using our services, you agree to be bound by these terms and conditions. Please read them carefully before using our facilities.</p>
+                </div>
+
+                <div class="my-3">
+                    <div class="d-flex align-items-center">
+                        <h1 class="display-4 text-primary text-center">02</h1>
+                        <h1 class="ml-2 text-uppercase">Use of Services</h1>
+                    </div>
+                    <p>Tapman Cold Storage provides storage solutions for perishable goods. Our services are intended for authorized commercial use only. Unauthorized use or misuse of our facilities may result in suspension or termination of service.</p>
+                </div>
+
+                <div class="my-3">
+                    <div class="d-flex align-items-center">
+                        <h1 class="display-4 text-primary text-center">03</h1>
+                        <h1 class="ml-2 text-uppercase">Payment Terms</h1>
+                    </div>
+                    <p>All storage fees are due on a monthly basis. Payments must be made promptly according to the terms outlined in the service agreement. Late payments may incur additional charges.</p>
+                </div>
+
+                <div class="my-3">
+                    <div class="d-flex align-items-center">
+                        <h1 class="display-4 text-primary text-center">04</h1>
+                        <h1 class="ml-2 text-uppercase">Liability</h1>
+                    </div>
+                    <p>
+                        Tapman Cold Storage will take all reasonable precautions to ensure the safety of stored goods. However, we are not responsible for any losses or damages resulting from circumstances beyond our control, including but not limited to natural disasters, power outages, or theft.
+                    </p>
+                </div>
+
+                
+                <div class="d-flex align-items-center">
+                    <h1 class="display-4 text-primary text-center">05</h1>
+                    <h1 class="ml-2 text-uppercase">Modifications</h1>
+                </div>
+                <p>Tapman Cold Storage reserves the right to update or modify these terms at any time. We will notify clients of significant changes, but it is the responsibility of the client to review these terms periodically.</p>
             </div>
         </div>
+
+        <!-- Page Header Start -->
 
         <!-- Footer Start -->
         <div class="container-fluid bg-secondaryblue py-5 px-sm-3 px-md-5" style="margin-top: 90px">
@@ -140,138 +173,19 @@
         <!-- Footer End -->
 
         <!-- Back to Top -->
-        <a href="#" class="btn btn-lg btn-primaryorange btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="fa fa-angle-double-up"></i></a>
 
-        <script src="js/main.js"></script>
-
-        <script>
-            // Get all the vehicle boxes
-            const vehicleBoxes = document.querySelectorAll(".vehicle-box");
-            const hiddenInput = document.getElementById("selected-vehicle");
-
-            vehicleBoxes.forEach((box) => {
-                box.addEventListener("click", function () {
-                    // Remove the 'selected' class from all boxes
-                    vehicleBoxes.forEach((box) => box.classList.remove("selected"));
-
-                    // Add the 'selected' class to the clicked box
-                    this.classList.add("selected");
-
-                    // Set the value of the hidden input to the selected vehicle's data-value
-                    const selectedVehicle = this.getAttribute("data-value");
-                    hiddenInput.value = selectedVehicle;
-
-                    console.log("Selected vehicle:", selectedVehicle);
-                });
-            });
-        </script>
-        <script>
-            function initAutocomplete() {
-                var pickupInput = document.getElementById("pickup-location");
-                var dropInput = document.getElementById("drop-location");
-                var storageInput = document.getElementById("storage-location");
-
-                var pickupAutocomplete = new google.maps.places.Autocomplete(pickupInput);
-                var dropAutocomplete = new google.maps.places.Autocomplete(dropInput);
-                var storageAutocomplete = new google.maps.places.Autocomplete(storageInput);
-
-                pickupAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
-                dropAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
-                storageAutocomplete.setComponentRestrictions({ country: ["IN", "PK", "BD", "NP", "BT", "LK", "MV"] });
-
-                // Add listeners to handle the selected place
-                pickupAutocomplete.addListener("place_changed", function () {
-                    var place = pickupAutocomplete.getPlace();
-                    console.log("Pickup location:", place);
-                });
-
-                dropAutocomplete.addListener("place_changed", function () {
-                    var place = dropAutocomplete.getPlace();
-                    console.log("Drop location:", place);
-                });
-
-                storageAutocomplete.addListener("place_changed", function () {
-                    var place = storageAutocomplete.getPlace();
-                    console.log("Storage location:", place);
-                });
-            }
-
-            // Initialize Google Maps Autocomplete after the page loads
-            google.maps.event.addDomListener(window, "load", initAutocomplete);
-        </script>
-
-        <script>
-            // Populate fields with data from localStorage
-            document.getElementById("pickup-location").value = localStorage.getItem("pickupLocation");
-            document.getElementById("drop-location").value = localStorage.getItem("dropLocation");
-            document.getElementById("pickup-date").value = localStorage.getItem("pickupDate");
-            document.getElementById("selected-vehicle").value = localStorage.getItem("selectedVehicle");
-            document.getElementById("quantity-product").value = localStorage.getItem("quantityProduct");
-            document.getElementById("type-product").value = localStorage.getItem("typeProduct");
-
-            async function fetchAvailableTrucks() {
-                const pickupLocation = document.getElementById("pickup-location").value;
-                const dropLocation = document.getElementById("drop-location").value;
-                const pickupDate = document.getElementById("pickup-date").value;
-                const selectedVehicle = document.getElementById("selected-vehicle").value;
-                const quantityProduct = document.getElementById("quantity-product").value;
-                const typeProduct = document.getElementById("type-product").value;
-
-                try {
-                    // Fetch data directly from the local vehicles.json file
-                    const response = await fetch("vehicles.json");
-                    const data = await response.json();
-
-                    console.log("Fetched vehicles:", data); // Check the structure to confirm
-
-                    const vehicleResults = document.getElementById("vehicleResults");
-                    vehicleResults.innerHTML = ""; // Clear previous results
-
-                    // Access the nested array, assuming it’s inside `data`
-                    const vehicles = data; // Adjust this based on the actual structure of vehicles.json
-
-                    if (!Array.isArray(vehicles)) {
-                        vehicleResults.innerHTML = "<p>Unexpected response format. No vehicles available.</p>";
-                        return;
-                    }
-
-                    // Display each vehicle
-                    vehicles.forEach((vehicle) => {
-                        const vehicleCard = document.createElement("div");
-                        vehicleCard.className = "col-md-7 my-2 p-0 border shadow rounded";
-                        vehicleCard.innerHTML = `
-                <div class="bg-${vehicle.vehicleType} d-flex justify-content-between">
-                    <h5 class="p-2">${vehicle.vehicleName} (${vehicle.id})</h5>
-                    <h5 class="p-2">Runs On: M T W T F S S</h5>
-                </div>
-                <div class="p-4">
-                    <div class="d-flex justify-content-between">
-                    <p><i class="text-dark fa fa-location-arrow mr-2"></i> ${vehicle.startFrom},${vehicle.dropLocations}</p>
-                    </div>
-                    <p><i class="text-dark fa fa-archive mr-2"></i> ${vehicle.capacity} Kg (${vehicle.size})</p>
-                    <p><i class="text-dark fa fa-thermometer-half mr-2"></i> ${vehicle.vehicleType} (${vehicle.tempRange})</p>
-                </div>
-                <div class="m-2 p-4 d-flex justify-content-between align-items-center">
-                            <div><p class="font-weight-bold"><span class="result"></span></p></div>
-                            <button type="button" class="btn-booknow">Book Now</button>
-                        </div>`;
-
-                        vehicleResults.appendChild(vehicleCard);
-                    });
-                } catch (error) {
-                    console.error("Error fetching vehicles:", error);
-                    vehicleResults.innerHTML = "<p>Unable to fetch vehicle data.</p>";
-                }
-            }
-
-            fetchAvailableTrucks();
-        </script>
-
-        <!-- calculate price  -->
-
-        <script src="js/priceEstimation.js"></script>
-
+        <!-- JavaScript Libraries -->
         <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+        <script src="lib/easing/easing.min.js"></script>
+        <script src="lib/waypoints/waypoints.min.js"></script>
+        <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+        <script src="lib/tempusdominus/js/moment.min.js"></script>
+        <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+        <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+        <!-- Template Javascript -->
+        <script src="js/main.js"></script>
     </body>
 </html>

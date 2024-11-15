@@ -283,3 +283,48 @@ function showContent(serviceId, boxId) {
 
 
 
+
+
+
+
+
+
+
+// Check if user is logged in and update navbar accordingly
+function updateNavbarUser() {
+    const storedUser = JSON.parse(localStorage.getItem("user"));
+    const userArea = document.getElementById("user-area");
+  
+    if (storedUser) {
+      // User is logged in, display their name and logout button
+      userArea.innerHTML = `
+      <div style="padding: 30px 15px;">
+        <span>Welcome, ${storedUser.name}</span>
+        <a class="text-uppercase" id="logout-btn">Logout</a>
+        </div>
+      `;
+      
+      // Attach logout event handler
+      document.getElementById("logout-btn").addEventListener("click", () => {
+        logoutUser();
+      });
+    } else {
+      // User is not logged in, show login button
+      userArea.innerHTML = `<a href="login.html" id="login-btn" class="nav-item nav-link">Login</a>`;
+    }
+  }
+  
+  // Logout function to clear user data from localStorage
+  function logoutUser() {
+    // Remove user data from localStorage
+    localStorage.removeItem("user");
+  
+    // Reload the page to update the navbar
+    window.location.reload();
+  }
+  
+  // Run this function when the page loads
+  window.addEventListener("DOMContentLoaded", () => {
+    updateNavbarUser();
+  });
+  
